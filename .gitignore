@@ -1,0 +1,15 @@
+/*
+!/.gitignore
+
+!/saves
+/saves/*
+!/saves/Don\'t\ look\ into\ the\ woods
+
+!/shaderpacks
+/shaderpacks/*
+!/shaderpacks/BSL_v8.0.01.zip
+
+!/mods
+mods/*
+!/mods/CustomNPCs-1.16.5.20220515.jar
+!/mods/Guidebook-1.16.3-3.2.1.jar
