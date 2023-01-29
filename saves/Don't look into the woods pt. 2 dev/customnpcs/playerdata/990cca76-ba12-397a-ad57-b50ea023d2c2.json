@@ -1,0 +1,99 @@
+{
+    "TransportData": [
+    ],
+    "NpcsTimers": [
+    ],
+    "FactionData": [
+        {
+            "Points": 2000,
+            "Faction": 0
+        },
+        {
+            "Points": 0,
+            "Faction": 2
+        },
+        {
+            "Points": 1,
+            "Faction": 6
+        }
+    ],
+    "BankData": [
+    ],
+    "ItemGiversList": [
+    ],
+    "QuestData": {
+        "CompletedQuests": [
+            {
+                "Quest": 2,
+                "Date": 4725799L
+            }
+        ],
+        "ActiveQuests": [
+        ]
+    },
+    "PlayerCompanionId": 0,
+    "DialogData": [
+        {
+            "Dialog": 32
+        },
+        {
+            "Dialog": 1
+        },
+        {
+            "Dialog": 33
+        },
+        {
+            "Dialog": 2
+        },
+        {
+            "Dialog": 34
+        },
+        {
+            "Dialog": 3
+        },
+        {
+            "Dialog": 35
+        },
+        {
+            "Dialog": 36
+        },
+        {
+            "Dialog": 5
+        },
+        {
+            "Dialog": 37
+        },
+        {
+            "Dialog": 6
+        },
+        {
+            "Dialog": 38
+        },
+        {
+            "Dialog": 7
+        },
+        {
+            "Dialog": 39
+        },
+        {
+            "Dialog": 8
+        },
+        {
+            "Dialog": 10
+        },
+        {
+            "Dialog": 14
+        },
+        {
+            "Dialog": 17
+        }
+    ],
+    "ItemGiverChained": [
+    ],
+    "MailData": [
+    ],
+    "PlayerName": "girvel",
+    "UUID": "990cca76-ba12-397a-ad57-b50ea023d2c2",
+    "ScriptStoreddata": {
+    }
+}

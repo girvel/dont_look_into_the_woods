@@ -1,0 +1,698 @@
+{
+    "ReturnToStart": 1b,
+    "Brain": {
+        "memories": {
+        }
+    },
+    "NpcInv": [
+    ],
+    "BossColor": 0,
+    "PotionEffect": 0,
+    "Size": 5,
+    "stopAndInteract": 1b,
+    "Resistances": {
+        "Arrow": 1.0f,
+        "Explosion": 1.0f,
+        "Knockback": 1.0f,
+        "Melee": 1.0f
+    },
+    "BossBar": 0b,
+    "RespawnTime": 20,
+    "NpcAngrySound": "",
+    "ReactsToFire": 0b,
+    "IgnoreCobweb": 0b,
+    "PositionOffsetZ": 5.0f,
+    "PositionOffsetY": 5.0f,
+    "PositionOffsetX": 5.0f,
+    "CanUpdate": 1b,
+    "LootMode": 0,
+    "TransformHasAI": 0b,
+    "AttackStrenght": 5,
+    "PersistenceRequired": 0b,
+    "id": "customnpcs:customnpc",
+    "IsStatue": 0b,
+    "MovingPatern": 0,
+    "NpcLines": {
+        "Lines": [
+        ]
+    },
+    "DefendFaction": 0b,
+    "FireIndirect": 0,
+    "NpcVisible": 0,
+    "LinkedNpcName": "",
+    "NpcScenes": {
+        "Scenes": [
+        ]
+    },
+    "HitSound": "minecraft:entity.arrow.hit",
+    "FindShelter": 2,
+    "Air": 300s,
+    "Orientation": 0,
+    "ScriptLanguage": "ECMAScript",
+    "HandItems": [
+        {
+        },
+        {
+        }
+    ],
+    "KnockBack": 0,
+    "TransformHasJob": 0b,
+    "ArmorDropChances": [
+        0.085f,
+        0.085f,
+        0.085f,
+        0.085f
+    ],
+    "BurnInSun": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_sword",
+                "Count": 1b,
+                "tag": {
+                    "Damage": 0,
+                    "display": {
+                        "Name": "{\"text\": \"Stæinhildr\", \"color\": \"dark_purple\"}"
+                    },
+                    "Enchantments": [
+                        {
+                            "lvl": 1,
+                            "id": "minecraft:mending"
+                        }
+                    ]
+                }
+            },
+            {
+                "Slot": 1b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:crossbow",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 321,
+                    "display": {
+                        "Name": "{\"text\":\"Фамильный арбалет\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 3b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_helmet",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "color": 6192150,
+                        "Name": "{\"text\":\"Шапка лесника\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 4b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:wooden_sword",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Ржавый меч\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 6b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_chestplate",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "color": 6192150,
+                        "Name": "{\"text\":\"Куртка лесника\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 7b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                        "ScriptEnabled": 1b,
+                        "DurabilityValue": 1.0d,
+                        "Scripts": [
+                            {
+                                "Script": "function max(a, b) {
+    return a > b ? a : b
+}
+
+function tick(event) {
+    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * event.player.getPos().distanceTo(event.API.getIPos(-175, 69, 121))))
+}",
+                                "Console": [
+                                ],
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ItemColor": -1,
+                        "MaxStackSize": 64,
+                        "DurabilityShow": 1b,
+                        "ScriptLanguage": "ECMAScript",
+                        "DurabilityColor": 0
+                    }
+                },
+                "id": "customnpcs:scripted_item",
+                "Count": 1b,
+                "tag": {
+                    "ScriptedData": {
+                        "ScriptEnabled": 1b,
+                        "Scripts": [
+                            {
+                                "Console": [
+                                ],
+                                "Script": "function max(a, b) {
+    return a > b ? a : b
+}
+
+function tick(event) {
+    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * event.player.getPos().distanceTo(event.API.getIPos(-175, 69, 121))))
+}",
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ScriptLanguage": "ECMAScript"
+                    }
+                }
+            },
+            {
+                "Slot": 9b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_leggings",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "color": 6192150,
+                        "Name": "{\"text\":\"Штаны лесника\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 10b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                        "ScriptEnabled": 1b,
+                        "DurabilityValue": 1.0d,
+                        "Scripts": [
+                            {
+                                "Script": "function max(a, b) {
+    return a > b ? a : b
+}
+
+function min(a, b) {
+    return a < b ? a : b
+}
+
+function init(event) {
+    event.item.setTexture(\"minecraft:iron_axe\")
+    event.item.setCustomName('ᛊᛏᛇᛁᚾᚺᛁᛚᛞᚱ')
+    event.item.setLore([\"Старинный топор\", \"из розоватого металла\"])
+    event.item.setColor(0xFFAAFF)
+    event.item.setDurabilityShow(true)
+    event.item.setAttribute(\"generic.attack_damage\", 14, 0)
+    event.item.setAttribute(\"generic.attack_speed\", -2.5, 0)
+}
+
+function pickedUp(event){
+    event.API.executeCommand(
+        event.player.getWorld(), 
+        '/tellraw @p {\"text\": \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\", \"color\": \"dark_purple\"}'
+    )
+}
+
+function tick(event) {
+    var d1 = event.player.getPos().distanceTo(event.API.getIPos(-175, 69, 121))
+    var d2 = event.player.getPos().distanceTo(event.API.getIPos(-289, 70, -39))
+
+    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * min(d1, d2)))
+}",
+                                "Console": [
+                                ],
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:iron_axe",
+                        "ItemColor": 16755455,
+                        "MaxStackSize": 64,
+                        "DurabilityShow": 1b,
+                        "ScriptLanguage": "ECMAScript",
+                        "DurabilityColor": 249
+                    }
+                },
+                "id": "customnpcs:scripted_item",
+                "Count": 1b,
+                "tag": {
+                    "ScriptedData": {
+                        "ScriptEnabled": 1b,
+                        "Scripts": [
+                            {
+                                "Console": [
+                                ],
+                                "Script": "function max(a, b) {
+    return a > b ? a : b
+}
+
+function min(a, b) {
+    return a < b ? a : b
+}
+
+function init(event) {
+    event.item.setTexture(\"minecraft:iron_axe\")
+    event.item.setCustomName('ᛊᛏᛇᛁᚾᚺᛁᛚᛞᚱ')
+    event.item.setLore([\"Старинный топор\", \"из розоватого металла\"])
+    event.item.setColor(0xFFAAFF)
+    event.item.setDurabilityShow(true)
+    event.item.setAttribute(\"generic.attack_damage\", 14, 0)
+    event.item.setAttribute(\"generic.attack_speed\", -2.5, 0)
+}
+
+function pickedUp(event){
+    event.API.executeCommand(
+        event.player.getWorld(), 
+        '/tellraw @p {\"text\": \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\", \"color\": \"dark_purple\"}'
+    )
+}
+
+function tick(event) {
+    var d1 = event.player.getPos().distanceTo(event.API.getIPos(-175, 69, 121))
+    var d2 = event.player.getPos().distanceTo(event.API.getIPos(-289, 70, -39))
+
+    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * min(d1, d2)))
+}",
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:iron_axe",
+                        "ScriptLanguage": "ECMAScript"
+                    },
+                    "AttributeModifiers": [
+                        {
+                            "Amount": 14.0d,
+                            "Slot": "mainhand",
+                            "AttributeName": "generic.attack_damage",
+                            "Operation": 0,
+                            "UUID": [I;925781584,587353276,-2024190801,-308708576],
+                            "Name": "generic.attack_damage"
+                        },
+                        {
+                            "Amount": -2.5d,
+                            "Slot": "mainhand",
+                            "AttributeName": "generic.attack_speed",
+                            "Operation": 0,
+                            "UUID": [I;178400678,362367317,-1101796300,-1856264930],
+                            "Name": "generic.attack_speed"
+                        }
+                    ],
+                    "display": {
+                        "Lore": [
+                            "{\"translate\":\"Старинный топор\"}",
+                            "{\"translate\":\"из розоватого металла\"}"
+                        ],
+                        "Name": "{\"translate\":\"ᛊᛏᛇᛁᚾᚺᛁᛚᛞᚱ\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 12b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_boots",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "color": 6192150,
+                        "Name": "{\"text\":\"Сапоги лесника\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 15b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_leggings",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "color": 16369622,
+                        "Name": "{\"text\":\"Ахахахахаха\"}"
+                    },
+                    "Enchantments": [
+                        {
+                            "lvl": 1s,
+                            "id": "minecraft:protection"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "StandingState": 0,
+    "AttackInvisible": 0b,
+    "NpcInteractNPCLines": {
+        "Lines": [
+        ]
+    },
+    "HurtTime": 0s,
+    "WalkingRange": 10,
+    "ShotCount": 1,
+    "pDur": 5,
+    "TraderIgnoreDamage": 0b,
+    "AttackRange": 2,
+    "NpcKillLines": {
+        "Lines": [
+        ]
+    },
+    "PotionImmune": 0b,
+    "AvoidsSun": 0b,
+    "Texture": "customnpcs:textures/entity/humanmale/steve.png",
+    "NpcJob": 0,
+    "BurstCount": 1,
+    "NpcAttackLines": {
+        "Lines": [
+        ]
+    },
+    "pSpeed": 10,
+    "pArea": 0,
+    "DeathTime": 0s,
+    "pImpact": 0,
+    "MoveState": 0,
+    "pRender3D": 1b,
+    "Motion": [
+        0.0d,
+        -0.0784000015258789d,
+        0.0d
+    ],
+    "CombatRegen": 0,
+    "NpcsTimers": [
+    ],
+    "MarkovGender": 0,
+    "pEffect": 0,
+    "DistanceToMelee": 0,
+    "NpcStepSound": "",
+    "FireRate": 5,
+    "LeftHanded": 0b,
+    "pEffAmp": 0,
+    "OnGround": 1b,
+    "ImmuneToFire": 0b,
+    "NpcKilledLines": {
+        "Lines": [
+        ]
+    },
+    "TraderMarket": "",
+    "Fire": -1s,
+    "ArmorItems": [
+        {
+        },
+        {
+        },
+        {
+        },
+        {
+        }
+    ],
+    "DisablePitch": 0b,
+    "pPhysics": 1b,
+    "TransformHasInv": 0b,
+    "NpcInteractLines": {
+        "Lines": [
+        ]
+    },
+    "HurtByTimestamp": 5667,
+    "TraderCurrency": {
+        "NpcMiscInv": [
+        ]
+    },
+    "pSpin": 0b,
+    "NpcHurtSound": "minecraft:entity.player.hurt",
+    "pTrail": 0,
+    "CreatureType": 0,
+    "Attributes": [
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        }
+    ],
+    "Invulnerable": 0b,
+    "TransformHasDisplay": 0b,
+    "NoFallDamage": 0b,
+    "AbsorptionAmount": 0.0f,
+    "TransformHasRole": 0b,
+    "Name": "Weaponsmith",
+    "FallDistance": 0.0f,
+    "SkinColor": 16777215,
+    "NpcIdleSound": "",
+    "Weapons": [
+    ],
+    "NPCDialogOptions": [
+    ],
+    "AggroRange": 16,
+    "DirectLOS": 1b,
+    "HealthRegen": 1,
+    "ForgeCaps": {
+    },
+    "HandDropChances": [
+        0.085f,
+        0.085f
+    ],
+    "NpcModelData": {
+        "LegsConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 1.0f,
+            "TransZ": 0.0f,
+            "TransY": 0.0f,
+            "TransX": 0.012000002f,
+            "ScaleY": 1.0f,
+            "ScaleX": 1.0f
+        },
+        "BodyConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 1.0f,
+            "TransZ": 0.0f,
+            "TransY": 0.0f,
+            "TransX": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleX": 1.0f
+        },
+        "Eyes": {
+            "Pattern": 0b,
+            "Glint": 1b,
+            "Type": 0b,
+            "PositionY": 1,
+            "SkinColor": 11830381,
+            "PlayerTexture": 0b,
+            "Color": 3361970,
+            "BrowColor": 5982516,
+            "BrowThickness": 4
+        },
+        "LegParts": {
+            "Pattern": 0b,
+            "Type": 0b,
+            "PlayerTexture": 0b,
+            "Color": 16777215
+        },
+        "Parts": [
+        ],
+        "SimpleRender": 0b,
+        "ArmsConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 1.0f,
+            "TransZ": 0.0f,
+            "TransY": 0.0f,
+            "TransX": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleX": 1.0f
+        },
+        "ExtraData": {
+        },
+        "HeadConfig": {
+            "NotShared": 0b,
+            "ScaleZ": 1.0f,
+            "TransZ": 0.0f,
+            "TransY": 0.0f,
+            "TransX": 0.0f,
+            "ScaleY": 1.0f,
+            "ScaleX": 1.0f
+        }
+    },
+    "VisibleAvailability": {
+        "AvailabilityQuestId": -1,
+        "AvailabilityScoreboardType": 1,
+        "AvailabilityFactionStance": 0,
+        "AvailabilityScoreboard2Value": 1,
+        "AvailabilityQuest": 0,
+        "AvailabilityDialog4": 0,
+        "AvailabilityScoreboardObjective": "",
+        "AvailabilityDialog3": 0,
+        "AvailabilityQuest2": 0,
+        "AvailabilityQuest3": 0,
+        "AvailabilityScoreboard2Objective": "",
+        "AvailabilityQuest4": 0,
+        "ModRev": 18,
+        "AvailabilityDialog2": 0,
+        "AvailabilityDayTime": 0,
+        "AvailabilityFaction2Id": -1,
+        "AvailabilityScoreboardValue": 1,
+        "AvailabilityFaction": 0,
+        "AvailabilityDialog": 0,
+        "AvailabilityScoreboard2Type": 1,
+        "AvailabilityFaction2": 0,
+        "AvailabilityFactionId": -1,
+        "AvailabilityFaction2Stance": 0,
+        "AvailabilityDialogId": -1,
+        "AvailabilityQuest4Id": -1,
+        "AvailabilityQuest3Id": -1,
+        "AvailabilityQuest2Id": -1,
+        "AvailabilityDialog2Id": -1,
+        "AvailabilityDialog3Id": -1,
+        "AvailabilityDialog4Id": -1,
+        "AvailabilityMinPlayerLevel": 0
+    },
+    "minDelay": 20,
+    "DoorInteract": 2,
+    "MoveSpeed": 5,
+    "TransformEditingModus": 0b,
+    "UsingSkinUrl": 0b,
+    "SkinUrl": "",
+    "CanSwim": 1b,
+    "TraderIgnoreNBT": 0b,
+    "GroundSound": "minecraft:block.stone.break",
+    "MaxHealth": 20,
+    "HideBodyWhenKilled": 0b,
+    "AttackSpeed": 20,
+    "PotionDuration": 5,
+    "maxDelay": 40,
+    "ScriptEnabled": 0b,
+    "Role": 1,
+    "DropChance": [
+    ],
+    "FactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "pDamage": 4,
+    "KilledTime": 0L,
+    "AimWhileShooting": 0b,
+    "CanPickUpLoot": 0b,
+    "AttackOtherFactions": 0b,
+    "CanDrown": 1b,
+    "pSize": 5,
+    "CanSprint": 0b,
+    "CanLeap": 0b,
+    "TransformIsActive": 0b,
+    "ForgeData": {
+        "cnpcmarkdata": {
+            "marks": [
+            ]
+        }
+    },
+    "MovingState": 0,
+    "MovingPos": 0,
+    "PotionAmp": 0,
+    "OnAttack": 0,
+    "FallFlying": 0b,
+    "MaxExp": 0,
+    "OrderedLines": 0b,
+    "PortalCooldown": 0,
+    "pGlows": 0b,
+    "TransformHasAdvanced": 0b,
+    "TransformHasStats": 0b,
+    "MovementType": 0,
+    "FiringSound": "minecraft:entity.arrow.shoot",
+    "ModRev": 18,
+    "Accuracy": 60,
+    "MinExp": 0,
+    "Armor": [
+    ],
+    "CloakTexture": "",
+    "GlowTexture": "",
+    "MaxFiringRange": 15,
+    "pXlr8": 0b,
+    "MarkovGeneratorId": 3,
+    "Scripts": [
+    ],
+    "Health": 20.0f,
+    "pStick": 0b,
+    "MovingPause": 1b,
+    "NpcDeathSound": "minecraft:entity.player.hurt",
+    "FactionID": 0,
+    "Title": "",
+    "TotalTicksAlive": 7424L,
+    "Rotation": [
+        162.38687f,
+        0.0f
+    ],
+    "ShowName": 0,
+    "npcInteracting": 1b,
+    "AvoidsWater": 0b,
+    "NoLivingAnimation": 0b,
+    "SpawnCycle": 0
+}
