@@ -15,6 +15,10 @@
         {
             "Points": 1,
             "Faction": 6
+        },
+        {
+            "Points": 0,
+            "Faction": 8
         }
     ],
     "BankData": [
@@ -25,7 +29,7 @@
         "CompletedQuests": [
             {
                 "Quest": 2,
-                "Date": 4725799L
+                "Date": 4789927L
             }
         ],
         "ActiveQuests": [
@@ -79,7 +83,16 @@
             "Dialog": 8
         },
         {
+            "Dialog": 40
+        },
+        {
+            "Dialog": 41
+        },
+        {
             "Dialog": 10
+        },
+        {
+            "Dialog": 42
         },
         {
             "Dialog": 14

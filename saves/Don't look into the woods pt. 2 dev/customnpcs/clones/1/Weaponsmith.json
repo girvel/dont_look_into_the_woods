@@ -11,10 +11,10 @@
     "Size": 5,
     "stopAndInteract": 1b,
     "Resistances": {
-        "Arrow": 1.0f,
-        "Explosion": 1.0f,
-        "Knockback": 1.0f,
-        "Melee": 1.0f
+        "Arrow": 2.0f,
+        "Explosion": 2.0f,
+        "Knockback": 2.0f,
+        "Melee": 2.0f
     },
     "BossBar": 0b,
     "RespawnTime": 20,
@@ -85,22 +85,6 @@
                             "id": "minecraft:mending"
                         }
                     ]
-                }
-            },
-            {
-                "Slot": 1b,
-                "ForgeCaps": {
-                    "customnpcs:itemscripteddata": {
-                    }
-                },
-                "id": "minecraft:crossbow",
-                "Count": 1b,
-                "tag": {
-                    "RepairCost": 0,
-                    "Damage": 321,
-                    "display": {
-                        "Name": "{\"text\":\"Фамильный арбалет\"}"
-                    }
                 }
             },
             {
@@ -435,6 +419,22 @@ function debug(event, text) {
                 }
             },
             {
+                "Slot": 13b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:wooden_hoe",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Ржавая гоблинская алебарда\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 15b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -455,6 +455,22 @@ function debug(event, text) {
                             "id": "minecraft:protection"
                         }
                     ]
+                }
+            },
+            {
+                "Slot": 16b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:crossbow",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 320,
+                    "display": {
+                        "Name": "{\"text\":\"Неопрятный арбалет\"}"
+                    }
                 }
             }
         ]
@@ -530,7 +546,7 @@ function debug(event, text) {
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 187,
+    "HurtByTimestamp": 1729,
     "TraderCurrency": {
         "NpcMiscInv": [
         ]
@@ -545,16 +561,8 @@ function debug(event, text) {
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
         },
         {
             "Base": 0.5d,
@@ -563,6 +571,14 @@ function debug(event, text) {
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -725,7 +741,7 @@ function debug(event, text) {
     "MovingState": 0,
     "MovingPos": 0,
     "PotionAmp": 0,
-    "OnAttack": 0,
+    "OnAttack": 3,
     "FallFlying": 0b,
     "MaxExp": 0,
     "OrderedLines": 0b,
@@ -753,10 +769,10 @@ function debug(event, text) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 8334L,
+    "TotalTicksAlive": 11146L,
     "Rotation": [
-        162.38687f,
-        -0.16556872f
+        235.3736f,
+        0.0f
     ],
     "ShowName": 0,
     "npcInteracting": 1b,
