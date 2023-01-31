@@ -215,6 +215,8 @@ function tick(event) {
                         "Scripts": [
                             {
                                 "Script": "var obelisks = []
+var messages = []
+var obelisk_quest = null
 
 function init(event) {
     event.item.setTexture(\"minecraft:iron_axe\")
@@ -225,28 +227,31 @@ function init(event) {
     event.item.setAttribute(\"generic.attack_damage\", 14, 0)
     event.item.setAttribute(\"generic.attack_speed\", -2.5, 0)
     
+    messages = [
+        \"Правильно. Продолжай.\",
+        \"Не останавливайся, остался всего один.\",
+        \"Да...\"
+    ]
+    
     obelisks = [
         [event.API.getIPos(-175, 72, 121), event.API.getIPos(-175, 73, 121)],
         [event.API.getIPos(-289, 73, -39), event.API.getIPos(-289, 74, -39)],
         [event.API.getIPos(-486, 69, 50), event.API.getIPos(-486, 70, 50)]
     ]
+    
+    obelisk_quest = event.API.getQuests().get(2)
 }
 
 function pickedUp(event){
-    event.API.executeCommand(
-        event.player.getWorld(), 
-        '/tellraw @p {\"text\": \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\", \"color\": \"dark_purple\"}'
-    )
+    say(event, \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\")
 }
 
 function tick(event) {
-    var ds = []
-    
-    for (var i = 0; i < 3; i++) {
-        ds[i] = event.player.getPos().distanceTo(obelisks[i][0])
-    }
+    var ds = obelisks.map(function(obelisk) {
+        return event.player.getPos().distanceTo(obelisk[0])
+    })
 
-    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * min(ds[0], ds[1], ds[2])))
+    event.item.setDurabilityColor(colorMultiplication(0x55, 0xDD, 0xFF, Math.max(0, 1 - (1 / 150) * Math.min(ds[0], ds[1], ds[2]))))
 }
 
 function interact(event) {
@@ -254,31 +259,47 @@ function interact(event) {
         return
     }
     
-    for (var i = 0; i < 3; i++) {
-        if (event.target.getName() != \"minecraft:gilded_blackstone\") continue
-    
-        if (iposEqual(event.target.getPos(), obelisks[i][0]) || iposEqual(event.target.getPos(), obelisks[i][1])) {
-            event.player.getWorld().setBlock(obelisks[i][0], \"minecraft:magma_block\")
-            event.player.getWorld().setBlock(obelisks[i][1], \"minecraft:magma_block\")
-        }
+    if (!event.player.hasActiveQuest(2)) {
+        return
     }
+    
+    obelisks.forEach(function(obelisk, i) {
+        if (event.target.getName() != \"minecraft:gilded_blackstone\") return
+    
+        if (iposEqual(event.target.getPos(), obelisk[0]) || iposEqual(event.target.getPos(), obelisk[1])) {
+            event.player.getWorld().setBlock(obelisk[0], \"minecraft:magma_block\")
+            event.player.getWorld().setBlock(obelisk[1], \"minecraft:magma_block\")
+            
+            var objective = obelisk_quest.getObjectives(event.player)[0]
+            say(event, \"Лилу: \" + messages[objective.getProgress()])
+            objective.setProgress(objective.getProgress() + 1)
+        }
+    })
+}
+
+function say(event, message) {
+    event.API.executeCommand(
+        event.player.getWorld(), 
+        '/tellraw @p {\"text\": \"' + message + '\", \"color\": \"dark_purple\"}'
+    )
+}
+
+function colorMultiplication(r, g, b, k) {
+    return Math.floor(r * k) * 0x010000 + Math.floor(g * k) * 0x000100 + Math.floor(b * k)
 }
 
 function iposEqual(p1, p2) {
-    return p1.getX() == p2.getX() && p1.getY() == p2.getY() && p1.getZ() == p2.getZ()
-}
-
-function max(a, b) {
-    return a > b ? a : b
-}
-
-function min(a, b, c) {
-    return a < b ? (a < c ? a : c) : (b < c ? b : c)
+    return p1.getX() === p2.getX() && p1.getY() === p2.getY() && p1.getZ() === p2.getZ()
 }
 
 function debug(event, text) {
     event.API.executeCommand(event.player.getWorld(), \"/say \" + text)
-}",
+}
+
+
+
+
+",
                                 "Console": [
                                 ],
                                 "ScriptList": [
@@ -290,7 +311,7 @@ function debug(event, text) {
                         "MaxStackSize": 64,
                         "DurabilityShow": 1b,
                         "ScriptLanguage": "ECMAScript",
-                        "DurabilityColor": 247
+                        "DurabilityColor": 5362933
                     }
                 },
                 "id": "customnpcs:scripted_item",
@@ -303,6 +324,8 @@ function debug(event, text) {
                                 "Console": [
                                 ],
                                 "Script": "var obelisks = []
+var messages = []
+var obelisk_quest = null
 
 function init(event) {
     event.item.setTexture(\"minecraft:iron_axe\")
@@ -313,28 +336,31 @@ function init(event) {
     event.item.setAttribute(\"generic.attack_damage\", 14, 0)
     event.item.setAttribute(\"generic.attack_speed\", -2.5, 0)
     
+    messages = [
+        \"Правильно. Продолжай.\",
+        \"Не останавливайся, остался всего один.\",
+        \"Да...\"
+    ]
+    
     obelisks = [
         [event.API.getIPos(-175, 72, 121), event.API.getIPos(-175, 73, 121)],
         [event.API.getIPos(-289, 73, -39), event.API.getIPos(-289, 74, -39)],
         [event.API.getIPos(-486, 69, 50), event.API.getIPos(-486, 70, 50)]
     ]
+    
+    obelisk_quest = event.API.getQuests().get(2)
 }
 
 function pickedUp(event){
-    event.API.executeCommand(
-        event.player.getWorld(), 
-        '/tellraw @p {\"text\": \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\", \"color\": \"dark_purple\"}'
-    )
+    say(event, \"Stæinhildr: Я жажду воссоединения со своей хозяйкой. Отнеси меня к ней.\")
 }
 
 function tick(event) {
-    var ds = []
-    
-    for (var i = 0; i < 3; i++) {
-        ds[i] = event.player.getPos().distanceTo(obelisks[i][0])
-    }
+    var ds = obelisks.map(function(obelisk) {
+        return event.player.getPos().distanceTo(obelisk[0])
+    })
 
-    event.item.setDurabilityColor(0xFF * max(0, 1 - (1 / 150) * min(ds[0], ds[1], ds[2])))
+    event.item.setDurabilityColor(colorMultiplication(0x55, 0xDD, 0xFF, Math.max(0, 1 - (1 / 150) * Math.min(ds[0], ds[1], ds[2]))))
 }
 
 function interact(event) {
@@ -342,31 +368,47 @@ function interact(event) {
         return
     }
     
-    for (var i = 0; i < 3; i++) {
-        if (event.target.getName() != \"minecraft:gilded_blackstone\") continue
-    
-        if (iposEqual(event.target.getPos(), obelisks[i][0]) || iposEqual(event.target.getPos(), obelisks[i][1])) {
-            event.player.getWorld().setBlock(obelisks[i][0], \"minecraft:magma_block\")
-            event.player.getWorld().setBlock(obelisks[i][1], \"minecraft:magma_block\")
-        }
+    if (!event.player.hasActiveQuest(2)) {
+        return
     }
+    
+    obelisks.forEach(function(obelisk, i) {
+        if (event.target.getName() != \"minecraft:gilded_blackstone\") return
+    
+        if (iposEqual(event.target.getPos(), obelisk[0]) || iposEqual(event.target.getPos(), obelisk[1])) {
+            event.player.getWorld().setBlock(obelisk[0], \"minecraft:magma_block\")
+            event.player.getWorld().setBlock(obelisk[1], \"minecraft:magma_block\")
+            
+            var objective = obelisk_quest.getObjectives(event.player)[0]
+            say(event, \"Лилу: \" + messages[objective.getProgress()])
+            objective.setProgress(objective.getProgress() + 1)
+        }
+    })
+}
+
+function say(event, message) {
+    event.API.executeCommand(
+        event.player.getWorld(), 
+        '/tellraw @p {\"text\": \"' + message + '\", \"color\": \"dark_purple\"}'
+    )
+}
+
+function colorMultiplication(r, g, b, k) {
+    return Math.floor(r * k) * 0x010000 + Math.floor(g * k) * 0x000100 + Math.floor(b * k)
 }
 
 function iposEqual(p1, p2) {
-    return p1.getX() == p2.getX() && p1.getY() == p2.getY() && p1.getZ() == p2.getZ()
-}
-
-function max(a, b) {
-    return a > b ? a : b
-}
-
-function min(a, b, c) {
-    return a < b ? (a < c ? a : c) : (b < c ? b : c)
+    return p1.getX() === p2.getX() && p1.getY() === p2.getY() && p1.getZ() === p2.getZ()
 }
 
 function debug(event, text) {
     event.API.executeCommand(event.player.getWorld(), \"/say \" + text)
-}",
+}
+
+
+
+
+",
                                 "ScriptList": [
                                 ]
                             }
@@ -380,7 +422,7 @@ function debug(event, text) {
                             "Slot": "mainhand",
                             "AttributeName": "generic.attack_damage",
                             "Operation": 0,
-                            "UUID": [I;1798134223,490358626,-1223025128,455935183],
+                            "UUID": [I;-960566661,-111391602,-2099488235,-374968485],
                             "Name": "generic.attack_damage"
                         },
                         {
@@ -388,7 +430,7 @@ function debug(event, text) {
                             "Slot": "mainhand",
                             "AttributeName": "generic.attack_speed",
                             "Operation": 0,
-                            "UUID": [I;-127744334,1628130546,-2061419383,-366385389],
+                            "UUID": [I;1413192860,1780760964,-1370843489,-1075371877],
                             "Name": "generic.attack_speed"
                         }
                     ],
@@ -546,7 +588,7 @@ function debug(event, text) {
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 1729,
+    "HurtByTimestamp": 593,
     "TraderCurrency": {
         "NpcMiscInv": [
         ]
@@ -767,9 +809,9 @@ function debug(event, text) {
     "pStick": 0b,
     "MovingPause": 1b,
     "NpcDeathSound": "minecraft:entity.player.hurt",
-    "FactionID": 0,
+    "FactionID": 3,
     "Title": "",
-    "TotalTicksAlive": 11146L,
+    "TotalTicksAlive": 12203L,
     "Rotation": [
         235.3736f,
         0.0f

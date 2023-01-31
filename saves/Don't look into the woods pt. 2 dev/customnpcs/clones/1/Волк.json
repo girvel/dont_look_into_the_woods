@@ -32,7 +32,7 @@
         "Melee": 1.0f
     },
     "BossBar": 0b,
-    "RespawnTime": 900,
+    "RespawnTime": 0,
     "NpcAngrySound": "minecraft:entity.wolf.growl",
     "ReactsToFire": 0b,
     "IgnoreCobweb": 0b,
@@ -148,27 +148,19 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 3752,
+    "HurtByTimestamp": 58671,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.wolf.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.3499999940395355d,
-            "Name": "minecraft:generic.movement_speed"
-        },
-        {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 10.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
+            "Base": 0.3499999940395355d,
+            "Name": "minecraft:generic.movement_speed"
         },
         {
             "Base": 0.699999988079071d,
@@ -177,6 +169,14 @@
         {
             "Base": 8.0d,
             "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 10.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -403,14 +403,14 @@
     "NpcDeathSound": "minecraft:entity.wolf.death",
     "FactionID": 2,
     "Title": "",
-    "TotalTicksAlive": 174107L,
+    "TotalTicksAlive": 232888L,
     "Rotation": [
-        313.78195f,
+        353.0252f,
         0.0f
     ],
     "ShowName": 1,
     "npcInteracting": 0b,
     "AvoidsWater": 1b,
     "NoLivingAnimation": 0b,
-    "SpawnCycle": 0
+    "SpawnCycle": 3
 }

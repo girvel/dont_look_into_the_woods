@@ -21,6 +21,16 @@
                 "DialogColor": 14737632,
                 "OptionType": 1
             }
+        },
+        {
+            "OptionSlot": 2,
+            "Option": {
+                "DialogCommand": "",
+                "Dialog": 67,
+                "Title": "Там у какого-то торговца сломалась повозка.",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            }
         }
     ],
     "AvailabilityScoreboardType": 1,
@@ -74,7 +84,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674998774124L,
+        "TimePast": 1675195773995L,
         "Time": 0L,
         "Subject": ""
     }
