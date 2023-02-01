@@ -25,6 +25,30 @@ function iposEqual(p1, p2) {
     );
 }
 
+function findDialogByName(event, name) {
+    var categories = event.API.getDialogs().categories();
+    for (var i = 0; i < categories.size(); i++) {
+
+        var dialogs = categories[i].dialogs();
+        for (var j = 0; j < dialogs.size(); j++) {
+
+            if (dialogs[j].getName() == name) {
+                return dialogs[j];
+            }
+        }
+    }
+}
+
+function findPlayer(event) {
+
+    var worlds = event.API.getIWorlds();
+    for (var i = 0; i < worlds.length; i++) {
+
+        var players = worlds[i].getAllPlayers();
+        if (players.length > 0) return players[0];
+    }
+}
+
 function create_navigator(from, to) {
     return {
         _from: from,
@@ -43,6 +67,10 @@ function create_navigator(from, to) {
         },
 
         init: function(event) {
+            if (findPlayer(event, event).hasReadDialog(
+                findDialogByName(event, this._dialog).getId()
+            )) return;
+
             event.npc.getAi().setMovingType(0);
             event.npc.getAi().setAnimation(this._animation);
             event.npc.setHome(this._from[0], this._from[1], this._from[2]);
@@ -64,9 +92,9 @@ function create_navigator(from, to) {
                     event.API.getIPos(this._to[0], this._to[1], this._to[2])
                 ) <= 3
             ) {
-                event.npc.getAi().setMovingType(0)
-                event.npc.getAi().setAnimation(0)
-                event.npc.setHome(this._to[0], this._to[1], this._to[2])
+                event.npc.getAi().setMovingType(0);
+                event.npc.getAi().setAnimation(0);
+                event.npc.setHome(this._to[0], this._to[1], this._to[2]);
             }
         }
     };
