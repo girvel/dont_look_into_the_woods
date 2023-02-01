@@ -6,7 +6,15 @@
     "FactionData": [
         {
             "Points": 0,
+            "Faction": 2
+        },
+        {
+            "Points": 0,
             "Faction": 6
+        },
+        {
+            "Points": 2000,
+            "Faction": 11
         }
     ],
     "BankData": [
@@ -15,10 +23,6 @@
     ],
     "QuestData": {
         "CompletedQuests": [
-            {
-                "Quest": 4,
-                "Date": 5868240L
-            }
         ],
         "ActiveQuests": [
         ]
@@ -26,28 +30,7 @@
     "PlayerCompanionId": 0,
     "DialogData": [
         {
-            "Dialog": 64
-        },
-        {
-            "Dialog": 67
-        },
-        {
-            "Dialog": 68
-        },
-        {
-            "Dialog": 69
-        },
-        {
-            "Dialog": 8
-        },
-        {
-            "Dialog": 61
-        },
-        {
-            "Dialog": 62
-        },
-        {
-            "Dialog": 63
+            "Dialog": 80
         }
     ],
     "ItemGiverChained": [

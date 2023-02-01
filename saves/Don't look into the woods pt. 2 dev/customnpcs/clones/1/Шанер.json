@@ -95,9 +95,9 @@
     "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
-        0.004920591566350733d,
+        0.0d,
         -0.0784000015258789d,
-        -0.013096511494406599d
+        0.0d
     ],
     "CombatRegen": 0,
     "NpcsTimers": [
@@ -133,12 +133,20 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 22672,
+    "HurtByTimestamp": 23747,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
         {
             "Base": 0.4000000059604645d,
             "Name": "minecraft:generic.flying_speed"
@@ -148,16 +156,8 @@
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 20.0d,
             "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
         },
         {
             "Base": 5.0d,
@@ -179,8 +179,8 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
-                "Dialog": 4,
-                "Title": "А. Привет",
+                "Dialog": 73,
+                "Title": "-А. Посветлело",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
@@ -189,8 +189,8 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
-                "Dialog": 46,
-                "Title": "2 Привет",
+                "Dialog": 74,
+                "Title": "-Б. Дом в порядок",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
@@ -199,8 +199,8 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
-                "Dialog": 54,
-                "Title": "3 Привет (тошнит)",
+                "Dialog": 75,
+                "Title": "-В. Родители мудаки",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
@@ -209,42 +209,12 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
-                "Dialog": 55,
-                "Title": "4 Привет",
+                "Dialog": 76,
+                "Title": "-Г. Купался в водопаде",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
             "DialogSlot": 3
-        },
-        {
-            "NPCDialog": {
-                "DialogCommand": "",
-                "Dialog": 65,
-                "Title": "5 Привет",
-                "DialogColor": 14737632,
-                "OptionType": 1
-            },
-            "DialogSlot": 4
-        },
-        {
-            "NPCDialog": {
-                "DialogCommand": "",
-                "Dialog": 67,
-                "Title": "6 Кашляет",
-                "DialogColor": 14737632,
-                "OptionType": 1
-            },
-            "DialogSlot": 5
-        },
-        {
-            "NPCDialog": {
-                "DialogCommand": "",
-                "Dialog": 68,
-                "Title": "7 Молчит",
-                "DialogColor": 14737632,
-                "OptionType": 1
-            },
-            "DialogSlot": 6
         },
         {
             "NPCDialog": {
@@ -255,6 +225,16 @@
                 "OptionType": 1
             },
             "DialogSlot": 7
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 4,
+                "Title": "А. Привет",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 10
         }
     ],
     "AggroRange": 16,
@@ -467,9 +447,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 3225429L,
+    "TotalTicksAlive": 3283165L,
     "Rotation": [
-        200.74467f,
+        115.50267f,
         0.0f
     ],
     "ShowName": 1,

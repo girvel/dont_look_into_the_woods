@@ -287,7 +287,7 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
     "DefendFaction": 1b,
     "FireIndirect": 0,
     "NpcVisible": 0,
-    "LinkedNpcName": "",
+    "LinkedNpcName": "Гоблин (дальний бой)",
     "NpcScenes": {
         "Scenes": [
         ]
@@ -343,9 +343,9 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
     "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
-        0.0d,
+        0.006126566861587825d,
         -0.0784000015258789d,
-        0.0d
+        0.043805644656682165d
     ],
     "CombatRegen": 0,
     "NpcsTimers": [
@@ -381,7 +381,7 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 5922,
+    "HurtByTimestamp": 2740,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
@@ -392,8 +392,8 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 0.20000000298023224d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         },
         {
             "Base": 0.0d,
@@ -404,20 +404,20 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 4.0d,
-            "Name": "minecraft:generic.attack_damage"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 0.0d,
             "Name": "minecraft:generic.armor_toughness"
         },
         {
+            "Base": 0.20000000298023224d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
             "Base": 10.0d,
             "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 4.0d,
+            "Name": "minecraft:generic.attack_damage"
         }
     ],
     "Invulnerable": 0b,
@@ -680,9 +680,9 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 8,
     "Title": "",
-    "TotalTicksAlive": 89536L,
+    "TotalTicksAlive": 213000L,
     "Rotation": [
-        93.02881f,
+        343.36978f,
         0.0f
     ],
     "ShowName": 1,

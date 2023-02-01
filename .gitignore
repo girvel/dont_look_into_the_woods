@@ -17,5 +17,5 @@ mods/*
 !/mods/CustomNPCs-1.16.5.20220515.jar
 !/mods/Guidebook-1.16.3-3.2.1.jar
 
-!/tests
-!/sync.py
+!/venv
+!/scripts
