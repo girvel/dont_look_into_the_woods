@@ -47,7 +47,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
-    "DialogText": "Наслышан о твоей отваге. Нашему ордену не хватает таких людей. Присоединишься к нашей скромной трапезе?",
+    "DialogText": "Наслышан о твоей отваге. Нашему ордену не хватает таких людей. Присоединишься к моей скромной трапезе?",
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
@@ -64,7 +64,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674940472278L,
+        "TimePast": 1675257806907L,
         "Time": 0L,
         "Subject": ""
     }

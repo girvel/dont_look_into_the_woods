@@ -6,10 +6,20 @@
             "OptionSlot": 0,
             "Option": {
                 "DialogCommand": "",
-                "Dialog": -1,
+                "Dialog": 66,
                 "Title": "Почему вдруг так вежливо?",
                 "DialogColor": 14737632,
                 "OptionType": 1
+            }
+        },
+        {
+            "OptionSlot": 1,
+            "Option": {
+                "DialogCommand": "",
+                "Dialog": -1,
+                "Title": "Покажи чем торгуешь.",
+                "DialogColor": 14737632,
+                "OptionType": 3
             }
         }
     ],
@@ -64,7 +74,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675185483788L,
+        "TimePast": 1675202424182L,
         "Time": 0L,
         "Subject": ""
     }

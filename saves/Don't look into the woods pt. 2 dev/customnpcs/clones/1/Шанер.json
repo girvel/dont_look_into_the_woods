@@ -95,9 +95,9 @@
     "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
-        0.0d,
-        -0.047607982664384485d,
-        0.0d
+        0.004920591566350733d,
+        -0.0784000015258789d,
+        -0.013096511494406599d
     ],
     "CombatRegen": 0,
     "NpcsTimers": [
@@ -133,15 +133,23 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 7682,
+    "HurtByTimestamp": 22672,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
+            "Base": 0.4000000059604645d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
             "Base": 0.20000000298023224d,
             "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         },
         {
             "Base": 20.0d,
@@ -154,14 +162,6 @@
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 0.4000000059604645d,
-            "Name": "minecraft:generic.flying_speed"
         }
     ],
     "Invulnerable": 0b,
@@ -179,8 +179,8 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
-                "Dialog": 41,
-                "Title": "1 Привет",
+                "Dialog": 4,
+                "Title": "А. Привет",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
@@ -467,9 +467,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 972866L,
+    "TotalTicksAlive": 3225429L,
     "Rotation": [
-        309.5064f,
+        200.74467f,
         0.0f
     ],
     "ShowName": 1,

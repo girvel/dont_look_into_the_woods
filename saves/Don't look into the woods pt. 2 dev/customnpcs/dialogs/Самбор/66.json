@@ -29,13 +29,13 @@
     "DialogDisableEsc": 0b,
     "AvailabilityFaction": 0,
     "DialogTitle": "ВА. Профессионализм",
-    "AvailabilityDialog": 0,
+    "AvailabilityDialog": 2,
     "AvailabilityScoreboard2Type": 1,
     "AvailabilityFaction2": 0,
     "AvailabilityFactionId": -1,
     "AvailabilityFaction2Stance": 0,
     "DialogCommand": "",
-    "AvailabilityDialogId": -1,
+    "AvailabilityDialogId": 66,
     "OptionFaction2Points": 100,
     "DialogText": "Я за прилавком и я в жизни -- два разных, абсолютно ничем не связанных человека. Так что бы вы хотели приобрести?",
     "AvailabilityQuest4Id": -1,
@@ -54,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675182462444L,
+        "TimePast": 1675202523287L,
         "Time": 0L,
         "Subject": ""
     }

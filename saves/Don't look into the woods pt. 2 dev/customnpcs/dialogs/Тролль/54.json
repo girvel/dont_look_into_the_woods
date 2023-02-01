@@ -6,7 +6,7 @@
             "OptionSlot": 0,
             "Option": {
                 "DialogCommand": "",
-                "Dialog": -1,
+                "Dialog": 55,
                 "Title": "Инквизиция -- очень сильный орден, ты их не победишь",
                 "DialogColor": 14737632,
                 "OptionType": 1
@@ -16,7 +16,7 @@
             "OptionSlot": 1,
             "Option": {
                 "DialogCommand": "",
-                "Dialog": -1,
+                "Dialog": 56,
                 "Title": "Опасно.",
                 "DialogColor": 14737632,
                 "OptionType": 1
@@ -74,7 +74,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675171646214L,
+        "TimePast": 1675256684211L,
         "Time": 0L,
         "Subject": ""
     }

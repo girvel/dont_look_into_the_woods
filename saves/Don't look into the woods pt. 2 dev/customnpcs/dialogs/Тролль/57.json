@@ -6,7 +6,7 @@
             "OptionSlot": 0,
             "Option": {
                 "DialogCommand": "",
-                "Dialog": -1,
+                "Dialog": 59,
                 "Title": "Опасно. Уходить.",
                 "DialogColor": 14737632,
                 "OptionType": 1
@@ -16,7 +16,7 @@
             "OptionSlot": 1,
             "Option": {
                 "DialogCommand": "",
-                "Dialog": -1,
+                "Dialog": 55,
                 "Title": "Если ты не поспешишь, нам обоим придёт конец.",
                 "DialogColor": 14737632,
                 "OptionType": 1
@@ -74,7 +74,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675171682011L,
+        "TimePast": 1675256729846L,
         "Time": 0L,
         "Subject": ""
     }

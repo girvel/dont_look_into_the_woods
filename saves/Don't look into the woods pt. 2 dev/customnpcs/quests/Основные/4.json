@@ -16,8 +16,14 @@
     },
     "RewardExp": 0,
     "QuestCommand": "",
+    "QuestDialogs": [
+        {
+            "Integer": 69,
+            "Slot": 0
+        }
+    ],
     "ModRev": 18,
-    "Type": 5,
+    "Type": 1,
     "QuestMail": {
         "Sender": "",
         "BeenRead": 0b,
@@ -26,7 +32,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675182266988L,
+        "TimePast": 1675202306481L,
         "Time": 0L,
         "Subject": ""
     },
@@ -49,11 +55,7 @@
             }
         ]
     },
-    "CompleteText": "Трактирщик твой тоже чертила: пришёл, почесал репу и, сука, ушёл обратно! Чтоб его!",
-    "QuestManual": [
-        {
-            "Value": 1,
-            "Slot": "innkeeper_came"
-        }
-    ]
+    "CompleteText": "Что, гроши свои хочешь? Ты ж не сделал нихрена.
+
+На, подавись!"
 }
