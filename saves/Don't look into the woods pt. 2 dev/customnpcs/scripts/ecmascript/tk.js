@@ -99,3 +99,8 @@ function create_navigator(from, to) {
         }
     };
 }
+
+function setEnchantment(item, id, level) {
+    item.removeEnchant(id);
+    item.addEnchantment(id, level);
+}

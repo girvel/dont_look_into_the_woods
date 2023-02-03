@@ -12,10 +12,10 @@
                 "Count": 1b,
                 "tag": {
                     "RepairCost": 0,
-                    "Damage": 320,
                     "display": {
                         "Name": "{\"text\":\"Неопрятный арбалет\"}"
-                    }
+                    },
+                    "Damage": 320
                 }
             },
             {
@@ -179,6 +179,12 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
                         "ScriptEnabled": 1b,
                         "Scripts": [
                             {
+                                "Script": "function init(event) {
+    event.item.setTexture(\"minecraft:feather\")
+    event.item.setDurabilityShow(false)
+    event.item.setColor(0xAACC88)
+    event.item.setCustomName(\"Перо гоблина\")
+}",
                                 "Console": [
                                     {
                                         "Long": 1675086060103L,
@@ -232,12 +238,6 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
 	... 24 more"
                                     }
                                 ],
-                                "Script": "function init(event) {
-    event.item.setTexture(\"minecraft:feather\")
-    event.item.setDurabilityShow(false)
-    event.item.setColor(0xAACC88)
-    event.item.setCustomName(\"Перо гоблина\")
-}",
                                 "ScriptList": [
                                 ]
                             }
@@ -359,10 +359,10 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
                 "Count": 1b,
                 "tag": {
                     "RepairCost": 0,
-                    "Damage": 320,
                     "display": {
                         "Name": "{\"text\":\"Неопрятный арбалет\"}"
-                    }
+                    },
+                    "Damage": 320
                 }
             },
             {

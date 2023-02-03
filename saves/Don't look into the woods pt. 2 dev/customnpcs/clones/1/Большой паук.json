@@ -11,8 +11,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 7b
+            "id": "minecraft:spider_eye",
+            "Count": 5b
         },
         {
             "Slot": 1b,
@@ -20,8 +20,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 3b
+            "id": "minecraft:spider_eye",
+            "Count": 4b
         },
         {
             "Slot": 2b,
@@ -29,8 +29,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 2b
+            "id": "minecraft:spider_eye",
+            "Count": 3b
         },
         {
             "Slot": 3b,
@@ -38,8 +38,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 1b
+            "id": "minecraft:spider_eye",
+            "Count": 3b
         },
         {
             "Slot": 4b,
@@ -47,8 +47,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 1b
+            "id": "minecraft:spider_eye",
+            "Count": 2b
         },
         {
             "Slot": 5b,
@@ -56,8 +56,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
-            "Count": 1b
+            "id": "minecraft:spider_eye",
+            "Count": 2b
         },
         {
             "Slot": 6b,
@@ -65,7 +65,7 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
+            "id": "minecraft:spider_eye",
             "Count": 1b
         },
         {
@@ -74,12 +74,21 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:fermented_spider_eye",
+            "id": "minecraft:spider_eye",
+            "Count": 1b
+        },
+        {
+            "Slot": 8b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:spider_eye",
             "Count": 1b
         }
     ],
     "BossColor": 0,
-    "PotionEffect": 0,
+    "PotionEffect": 19,
     "Size": 8,
     "stopAndInteract": 1b,
     "Resistances": {
@@ -89,7 +98,7 @@
         "Melee": 1.0f
     },
     "BossBar": 0b,
-    "RespawnTime": 999999999,
+    "RespawnTime": 0,
     "NpcAngrySound": "",
     "ReactsToFire": 0b,
     "IgnoreCobweb": 1b,
@@ -210,12 +219,24 @@
             }
         ]
     },
-    "HurtByTimestamp": 2559,
+    "HurtByTimestamp": 1863,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.spider.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 60.0d,
+            "Name": "minecraft:generic.max_health"
+        },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
@@ -225,20 +246,8 @@
             "Name": "minecraft:generic.follow_range"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
-        },
-        {
-            "Base": 40.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
         }
     ],
     "Invulnerable": 0b,
@@ -251,18 +260,6 @@
     "SkinColor": 16777215,
     "NpcIdleSound": "minecraft:entity.spider.ambient",
     "Weapons": [
-        {
-            "Slot": 1b,
-            "ForgeCaps": {
-                "customnpcs:itemscripteddata": {
-                }
-            },
-            "id": "minecraft:tipped_arrow",
-            "Count": 1b,
-            "tag": {
-                "Potion": "minecraft:long_poison"
-            }
-        }
     ],
     "NPCDialogOptions": [
     ],
@@ -377,10 +374,10 @@
     "SkinUrl": "",
     "CanSwim": 1b,
     "GroundSound": "",
-    "MaxHealth": 40,
+    "MaxHealth": 60,
     "HideBodyWhenKilled": 1b,
     "AttackSpeed": 40,
-    "PotionDuration": 5,
+    "PotionDuration": 12,
     "maxDelay": 80,
     "ScriptEnabled": 0b,
     "Role": 0,
@@ -418,7 +415,7 @@
             "Slot": 7
         },
         {
-            "Integer": 100,
+            "Integer": 3,
             "Slot": 8
         }
     ],
@@ -471,20 +468,20 @@
     "MarkovGeneratorId": 6,
     "Scripts": [
     ],
-    "Health": 40.0f,
+    "Health": 60.0f,
     "pStick": 0b,
     "MovingPause": 1b,
     "NpcDeathSound": "minecraft:entity.spider.death",
     "FactionID": 2,
     "Title": "Patreon",
-    "TotalTicksAlive": 15973L,
+    "TotalTicksAlive": 46028L,
     "Rotation": [
-        269.73343f,
+        180.17761f,
         0.0f
     ],
     "ShowName": 1,
     "npcInteracting": 1b,
     "AvoidsWater": 1b,
     "NoLivingAnimation": 0b,
-    "SpawnCycle": 0
+    "SpawnCycle": 3
 }

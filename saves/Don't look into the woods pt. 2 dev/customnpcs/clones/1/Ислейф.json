@@ -133,12 +133,24 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 169,
+    "HurtByTimestamp": 66486,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
@@ -148,20 +160,8 @@
             "Name": "minecraft:generic.follow_range"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
         }
     ],
     "Invulnerable": 0b,
@@ -176,6 +176,36 @@
     "Weapons": [
     ],
     "NPCDialogOptions": [
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 85,
+                "Title": "-А. Апокалипсис",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 77,
+                "Title": "А. Узнаёт",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 6
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 81,
+                "Title": "Б. Основной",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 7
+        }
     ],
     "AggroRange": 16,
     "DirectLOS": 1b,
@@ -295,6 +325,42 @@
     "ScriptEnabled": 0b,
     "Role": 0,
     "DropChance": [
+        {
+            "Integer": 100,
+            "Slot": 0
+        },
+        {
+            "Integer": 100,
+            "Slot": 1
+        },
+        {
+            "Integer": 100,
+            "Slot": 2
+        },
+        {
+            "Integer": 100,
+            "Slot": 3
+        },
+        {
+            "Integer": 100,
+            "Slot": 4
+        },
+        {
+            "Integer": 100,
+            "Slot": 5
+        },
+        {
+            "Integer": 100,
+            "Slot": 6
+        },
+        {
+            "Integer": 100,
+            "Slot": 7
+        },
+        {
+            "Integer": 100,
+            "Slot": 8
+        }
     ],
     "FactionPoints": {
         "DecreaseFaction1Points": 0b,
@@ -349,9 +415,9 @@
     "pStick": 0b,
     "MovingPause": 1b,
     "NpcDeathSound": "minecraft:entity.player.hurt",
-    "FactionID": 0,
+    "FactionID": 5,
     "Title": "",
-    "TotalTicksAlive": 9022L,
+    "TotalTicksAlive": 92825L,
     "Rotation": [
         65.139114f,
         0.0f

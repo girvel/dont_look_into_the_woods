@@ -88,6 +88,347 @@
                 }
             },
             {
+                "Slot": 1b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                        "ScriptEnabled": 1b,
+                        "DurabilityValue": 1.0d,
+                        "Scripts": [
+                            {
+                                "Script": "function init(event) {
+    event.item.setTexture(\"minecraft:stick\");
+    event.item.setCustomName('Жезл молний');
+    event.item.setLore([\"Выглядит как\", \"обычная палка\"]);
+    event.item.setColor(0xffffff);
+    event.item.setDurabilityShow(true);
+    event.item.setAttribute(\"generic.attack_damage\", 14, 0);
+    event.item.setAttribute(\"generic.attack_speed\", -2.5, 0);
+}
+
+function interact(event) {
+    var target = event.player.rayTraceBlock(100, false, false).getPos();
+    
+    event.API.executeCommand(
+        event.player.getWorld(),
+        \"/summon minecraft:lightning_bolt \" + target.getX() + \" \" + target.getY() + \" \" + target.getZ()
+    );
+    event.item.setTexture(\"minecraft:blaze_rod\");
+}
+
+function tick(event) {
+    event.item.setTexture(\"minecraft:stick\");
+}",
+                                "Console": [
+                                    {
+                                        "Long": 1675442095768L,
+                                        "String": "javax.script.ScriptException: TypeError: null has no such function \"getWorld\" in <eval> at line number 15
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.api.wrapper.ItemScriptedWrapper.runScript(ItemScriptedWrapper.java:156)
+	at noppes.npcs.EventHooks.onScriptItemInteract(EventHooks.java:520)
+	at noppes.npcs.ScriptPlayerEventHandler.invoke(ScriptPlayerEventHandler.java:157)
+	at net.minecraftforge.eventbus.ASMEventHandler_72_ScriptPlayerEventHandler_invoke_RightClickItem.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at net.minecraftforge.common.ForgeHooks.onItemRightClick(ForgeHooks.java:802)
+	at net.minecraft.server.management.PlayerInteractionManager.func_187250_a(PlayerInteractionManager.java:283)
+	at net.minecraft.network.play.ServerPlayNetHandler.func_147346_a(ServerPlayNetHandler.java:982)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:31)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:9)
+	at net.minecraft.network.PacketThreadUtil.lambda$checkThreadAndEnqueue$0(PacketThreadUtil.java:36)
+	at net.optifine.util.PacketRunnable.run(PacketRunnable.java:28)
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(ThreadTaskExecutor.java:189)
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:734)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(ThreadTaskExecutor.java:151)
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:717)
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:711)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(ThreadTaskExecutor.java:167)
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:646)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:15 TypeError: null has no such function \"getWorld\"
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornBottomLinker.linkNull(NashornBottomLinker.java:249)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornBottomLinker.getGuardedInvocation(NashornBottomLinker.java:69)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$213$374A$\\^eval\\_.interact(<eval>:15)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:668)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 30 more"
+                                    },
+                                    {
+                                        "Long": 1675442123675L,
+                                        "String": "javax.script.ScriptException: TypeError: target.getX is not a function in <eval> at line number 16
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.api.wrapper.ItemScriptedWrapper.runScript(ItemScriptedWrapper.java:156)
+	at noppes.npcs.EventHooks.onScriptItemInteract(EventHooks.java:520)
+	at noppes.npcs.ScriptPlayerEventHandler.invoke(ScriptPlayerEventHandler.java:157)
+	at net.minecraftforge.eventbus.ASMEventHandler_72_ScriptPlayerEventHandler_invoke_RightClickItem.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at net.minecraftforge.common.ForgeHooks.onItemRightClick(ForgeHooks.java:802)
+	at net.minecraft.server.management.PlayerInteractionManager.func_187250_a(PlayerInteractionManager.java:283)
+	at net.minecraft.network.play.ServerPlayNetHandler.func_147346_a(ServerPlayNetHandler.java:982)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:31)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:9)
+	at net.minecraft.network.PacketThreadUtil.lambda$checkThreadAndEnqueue$0(PacketThreadUtil.java:36)
+	at net.optifine.util.PacketRunnable.run(PacketRunnable.java:28)
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(ThreadTaskExecutor.java:189)
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:734)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(ThreadTaskExecutor.java:151)
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:717)
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:711)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(ThreadTaskExecutor.java:167)
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:646)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:16 TypeError: target.getX is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$216$374A$\\^eval\\_.interact(<eval>:16)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:668)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 30 more"
+                                    }
+                                ],
+                                "ScriptList": [
+                                    {
+                                        "Line": "tk.js"
+                                    }
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:stick",
+                        "ItemColor": 16777215,
+                        "MaxStackSize": 64,
+                        "DurabilityShow": 1b,
+                        "ScriptLanguage": "ECMAScript",
+                        "DurabilityColor": -1
+                    }
+                },
+                "id": "customnpcs:scripted_item",
+                "Count": 1b,
+                "tag": {
+                    "ScriptedData": {
+                        "ScriptEnabled": 1b,
+                        "Scripts": [
+                            {
+                                "Console": [
+                                    {
+                                        "Long": 1675442095768L,
+                                        "String": "javax.script.ScriptException: TypeError: null has no such function \"getWorld\" in <eval> at line number 15
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.api.wrapper.ItemScriptedWrapper.runScript(ItemScriptedWrapper.java:156)
+	at noppes.npcs.EventHooks.onScriptItemInteract(EventHooks.java:520)
+	at noppes.npcs.ScriptPlayerEventHandler.invoke(ScriptPlayerEventHandler.java:157)
+	at net.minecraftforge.eventbus.ASMEventHandler_72_ScriptPlayerEventHandler_invoke_RightClickItem.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at net.minecraftforge.common.ForgeHooks.onItemRightClick(ForgeHooks.java:802)
+	at net.minecraft.server.management.PlayerInteractionManager.func_187250_a(PlayerInteractionManager.java:283)
+	at net.minecraft.network.play.ServerPlayNetHandler.func_147346_a(ServerPlayNetHandler.java:982)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:31)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:9)
+	at net.minecraft.network.PacketThreadUtil.lambda$checkThreadAndEnqueue$0(PacketThreadUtil.java:36)
+	at net.optifine.util.PacketRunnable.run(PacketRunnable.java:28)
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(ThreadTaskExecutor.java:189)
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:734)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(ThreadTaskExecutor.java:151)
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:717)
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:711)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(ThreadTaskExecutor.java:167)
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:646)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:15 TypeError: null has no such function \"getWorld\"
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornBottomLinker.linkNull(NashornBottomLinker.java:249)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornBottomLinker.getGuardedInvocation(NashornBottomLinker.java:69)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$213$374A$\\^eval\\_.interact(<eval>:15)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:668)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 30 more"
+                                    },
+                                    {
+                                        "Long": 1675442123675L,
+                                        "String": "javax.script.ScriptException: TypeError: target.getX is not a function in <eval> at line number 16
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.api.wrapper.ItemScriptedWrapper.runScript(ItemScriptedWrapper.java:156)
+	at noppes.npcs.EventHooks.onScriptItemInteract(EventHooks.java:520)
+	at noppes.npcs.ScriptPlayerEventHandler.invoke(ScriptPlayerEventHandler.java:157)
+	at net.minecraftforge.eventbus.ASMEventHandler_72_ScriptPlayerEventHandler_invoke_RightClickItem.invoke(.dynamic)
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at net.minecraftforge.common.ForgeHooks.onItemRightClick(ForgeHooks.java:802)
+	at net.minecraft.server.management.PlayerInteractionManager.func_187250_a(PlayerInteractionManager.java:283)
+	at net.minecraft.network.play.ServerPlayNetHandler.func_147346_a(ServerPlayNetHandler.java:982)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:31)
+	at net.minecraft.network.play.client.CPlayerTryUseItemPacket.func_148833_a(SourceFile:9)
+	at net.minecraft.network.PacketThreadUtil.lambda$checkThreadAndEnqueue$0(PacketThreadUtil.java:36)
+	at net.optifine.util.PacketRunnable.run(PacketRunnable.java:28)
+	at net.minecraft.util.concurrent.TickDelayedTask.run(SourceFile:18)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213166_h(ThreadTaskExecutor.java:189)
+	at net.minecraft.util.concurrent.RecursiveEventLoop.func_213166_h(SourceFile:23)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:734)
+	at net.minecraft.server.MinecraftServer.func_213166_h(MinecraftServer.java:159)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213168_p(ThreadTaskExecutor.java:151)
+	at net.minecraft.server.MinecraftServer.func_213205_aW(MinecraftServer.java:717)
+	at net.minecraft.server.MinecraftServer.func_213168_p(MinecraftServer.java:711)
+	at net.minecraft.util.concurrent.ThreadTaskExecutor.func_213161_c(ThreadTaskExecutor.java:167)
+	at net.minecraft.server.MinecraftServer.func_213202_o(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:646)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:16 TypeError: target.getX is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$216$374A$\\^eval\\_.interact(<eval>:16)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:668)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 30 more"
+                                    }
+                                ],
+                                "Script": "function init(event) {
+    event.item.setTexture(\"minecraft:stick\");
+    event.item.setCustomName('Жезл молний');
+    event.item.setLore([\"Выглядит как\", \"обычная палка\"]);
+    event.item.setColor(0xffffff);
+    event.item.setDurabilityShow(true);
+    event.item.setAttribute(\"generic.attack_damage\", 14, 0);
+    event.item.setAttribute(\"generic.attack_speed\", -2.5, 0);
+}
+
+function interact(event) {
+    var target = event.player.rayTraceBlock(100, false, false).getPos();
+    
+    event.API.executeCommand(
+        event.player.getWorld(),
+        \"/summon minecraft:lightning_bolt \" + target.getX() + \" \" + target.getY() + \" \" + target.getZ()
+    );
+    event.item.setTexture(\"minecraft:blaze_rod\");
+}
+
+function tick(event) {
+    event.item.setTexture(\"minecraft:stick\");
+}",
+                                "ScriptList": [
+                                    {
+                                        "Line": "tk.js"
+                                    }
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:stick",
+                        "ScriptLanguage": "ECMAScript"
+                    },
+                    "AttributeModifiers": [
+                        {
+                            "Amount": 14.0d,
+                            "Slot": "mainhand",
+                            "AttributeName": "generic.attack_damage",
+                            "Operation": 0,
+                            "UUID": [I;-236632325,2049919547,-1283640942,1828362733],
+                            "Name": "generic.attack_damage"
+                        },
+                        {
+                            "Amount": -2.5d,
+                            "Slot": "mainhand",
+                            "AttributeName": "generic.attack_speed",
+                            "Operation": 0,
+                            "UUID": [I;29449281,1363035037,-1110722004,-1712462658],
+                            "Name": "generic.attack_speed"
+                        }
+                    ],
+                    "display": {
+                        "Lore": [
+                            "{\"translate\":\"Выглядит как\"}",
+                            "{\"translate\":\"обычная палка\"}"
+                        ],
+                        "Name": "{\"translate\":\"Жезл молний\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 3b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -588,7 +929,7 @@ function debug(event, text) {
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 593,
+    "HurtByTimestamp": 198,
     "TraderCurrency": {
         "NpcMiscInv": [
         ]
@@ -603,10 +944,6 @@ function debug(event, text) {
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
@@ -615,12 +952,16 @@ function debug(event, text) {
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 20.0d,
             "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
@@ -811,10 +1152,10 @@ function debug(event, text) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 3,
     "Title": "",
-    "TotalTicksAlive": 12203L,
+    "TotalTicksAlive": 12499L,
     "Rotation": [
         235.3736f,
-        0.0f
+        -0.20157558f
     ],
     "ShowName": 0,
     "npcInteracting": 1b,
