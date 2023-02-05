@@ -31,7 +31,7 @@
     "PersistenceRequired": 0b,
     "id": "customnpcs:customnpc",
     "IsStatue": 0b,
-    "MovingPatern": 0,
+    "MovingPatern": 1,
     "NpcLines": {
         "Lines": [
         ]
@@ -133,15 +133,15 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 105156,
+    "HurtByTimestamp": 52629,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         },
         {
             "Base": 0.25d,
@@ -156,12 +156,12 @@
             "Name": "minecraft:generic.max_health"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
         }
     ],
     "Invulnerable": 0b,
@@ -179,12 +179,32 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
+                "Dialog": 98,
+                "Title": "-А. Я не некромант",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
                 "Dialog": 14,
                 "Title": "А. Знакомство",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
-            "DialogSlot": 0
+            "DialogSlot": 4
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 70,
+                "Title": "Б. Добрый день",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 5
         }
     ],
     "AggroRange": 16,
@@ -290,7 +310,7 @@
         "AvailabilityMinPlayerLevel": 0
     },
     "minDelay": 20,
-    "DoorInteract": 2,
+    "DoorInteract": 1,
     "MoveSpeed": 5,
     "TransformEditingModus": 0b,
     "UsingSkinUrl": 0b,
@@ -391,15 +411,740 @@
     "MarkovGeneratorId": 0,
     "Scripts": [
         {
-            "Script": "function dialogClose(event) {
-    event.API.executeCommand(
-        event.player.getWorld(),
-        \"/say \" + event.dialog.getName()
-    )
+            "Script": "var navigator = create_navigator([-163, 72, -118], [-454, 63, -190])
+    .animation(1)
+    .dialog(\"ААА. Приглашение\");
+
+function init(event) {
+    navigator.init(event);
+}
+
+function dialogClose(event) {
+    navigator.dialogClose(event);
+}
+
+function tick(event) {
+    navigator.tick(event);
+}
+    
+function init_(event) {
+    event.npc.getAi().setMovingType(0)
+    event.npc.getAi().setAnimation(1)
+    event.npc.setHome(-163, 72, -118)
+}
+
+function dialogClose_(event) {
+    if (event.dialog.getName() === \"ААА. Приглашение\") {
+        event.npc.getAi().setMovingType(2)
+    }
+}
+
+function tick_(event) {
+    if (event.npc.getAi().getMovingType() == 2 && event.npc.getPos().distanceTo(event.API.getIPos(-454, 63, -190)) <= 3) {
+        event.npc.getAi().setMovingType(0)
+        event.npc.getAi().setAnimation(0)
+        event.npc.setHome(-454, 63, -190)
+    }
 }",
             "Console": [
+                {
+                    "Long": 1675268863835L,
+                    "String": "javax.script.ScriptException: TypeError: api.getIWorlds().some is not a function in <eval> at line number 79
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:79 TypeError: api.getIWorlds().some is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$97$1868A$\\^eval\\_.findPlayer(<eval>:79)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$96$2534A$\\^eval\\_.create_navigator#init(<eval>:111)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$95$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675269072658L,
+                    "String": "javax.script.ScriptException: TypeError: worlds.size is not a function in <eval> at line number 80
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:80 TypeError: worlds.size is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$126$1868A$\\^eval\\_.findPlayer(<eval>:80)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$125$2466A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$124$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675269151165L,
+                    "String": "javax.script.ScriptException: TypeError: worlds.size is not a function in <eval> at line number 80
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:80 TypeError: worlds.size is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$161$1868A$\\^eval\\_.findPlayer(<eval>:80)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$160$2458A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$159$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675269255279L,
+                    "String": "javax.script.ScriptException: TypeError: worlds.size is not a function in <eval> at line number 82
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:82 TypeError: worlds.size is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$198$1868AA$\\^eval\\_.findPlayer(<eval>:82)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$197$2535A$\\^eval\\_.create_navigator#init(<eval>:108)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$196$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675269298486L,
+                    "String": "javax.script.ScriptException: TypeError: worlds.size is not a function in <eval> at line number 82
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:82 TypeError: worlds.size is not a function
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:100)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at org.openjdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:96)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:161)
+	at jdk.dynalink/jdk.dynalink.linker.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:109)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.lambda$getGuardedInvocation$0(LinkerServicesImpl.java:137)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getWithLookupInternal(LinkerServicesImpl.java:168)
+	at jdk.dynalink/jdk.dynalink.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:135)
+	at jdk.dynalink/jdk.dynalink.DynamicLinker.relink(DynamicLinker.java:241)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$233$1868AA$\\^eval\\_.findPlayer(<eval>:82)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$232$2542A$\\^eval\\_.create_navigator#init(<eval>:108)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$231$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675318769011L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675351399611L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675421794748L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675509382651L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675513958229L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675543784992L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 105
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:105 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2474A$\\^eval\\_.create_navigator#init(<eval>:105)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675549746009L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 118
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2751A$\\^eval\\_.create_navigator#init(<eval>:118)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675551333654L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 118
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2751A$\\^eval\\_.create_navigator#init(<eval>:118)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675585128854L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 118
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2751A$\\^eval\\_.create_navigator#init(<eval>:118)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1675586310733L,
+                    "String": "javax.script.ScriptException: <eval>:145:8 Expected comma but found ident
+        move: function(event) {
+        ^ in <eval> at line number 145 at column number 8
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:530)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:517)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:395)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:151)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:134)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openjdk.nashorn.internal.runtime.ParserException: <eval>:145:8 Expected comma but found ident
+        move: function(event) {
+        ^
+	at org.openjdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:293)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:278)
+	at org.openjdk.nashorn.internal.parser.Parser.objectLiteral(Parser.java:2972)
+	at org.openjdk.nashorn.internal.parser.Parser.primaryExpression(Parser.java:2777)
+	at org.openjdk.nashorn.internal.parser.Parser.memberExpression(Parser.java:3598)
+	at org.openjdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3382)
+	at org.openjdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4397)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4568)
+	at org.openjdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4720)
+	at org.openjdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4659)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4537)
+	at org.openjdk.nashorn.internal.parser.Parser.returnStatement(Parser.java:2319)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1057)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4165)
+	at org.openjdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3795)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1090)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.program(Parser.java:835)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:322)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:282)
+	at org.openjdk.nashorn.internal.runtime.Context.compile(Context.java:1482)
+	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:1449)
+	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:759)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:528)
+	... 21 more"
+                },
+                {
+                    "Long": 1675586416550L,
+                    "String": "javax.script.ScriptException: <eval>:145:8 Expected comma but found ident
+        move: function(event) {
+        ^ in <eval> at line number 145 at column number 8
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:530)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:517)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.evalImpl(NashornScriptEngine.java:395)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.eval(NashornScriptEngine.java:151)
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:134)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: org.openjdk.nashorn.internal.runtime.ParserException: <eval>:145:8 Expected comma but found ident
+        move: function(event) {
+        ^
+	at org.openjdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:293)
+	at org.openjdk.nashorn.internal.parser.AbstractParser.error(AbstractParser.java:278)
+	at org.openjdk.nashorn.internal.parser.Parser.objectLiteral(Parser.java:2972)
+	at org.openjdk.nashorn.internal.parser.Parser.primaryExpression(Parser.java:2777)
+	at org.openjdk.nashorn.internal.parser.Parser.memberExpression(Parser.java:3598)
+	at org.openjdk.nashorn.internal.parser.Parser.leftHandSideExpression(Parser.java:3382)
+	at org.openjdk.nashorn.internal.parser.Parser.unaryExpression(Parser.java:4397)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4568)
+	at org.openjdk.nashorn.internal.parser.Parser.conditionalExpression(Parser.java:4720)
+	at org.openjdk.nashorn.internal.parser.Parser.assignmentExpression(Parser.java:4659)
+	at org.openjdk.nashorn.internal.parser.Parser.expression(Parser.java:4537)
+	at org.openjdk.nashorn.internal.parser.Parser.returnStatement(Parser.java:2319)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1057)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.functionBody(Parser.java:4165)
+	at org.openjdk.nashorn.internal.parser.Parser.functionExpression(Parser.java:3795)
+	at org.openjdk.nashorn.internal.parser.Parser.statement(Parser.java:1090)
+	at org.openjdk.nashorn.internal.parser.Parser.sourceElements(Parser.java:900)
+	at org.openjdk.nashorn.internal.parser.Parser.program(Parser.java:835)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:322)
+	at org.openjdk.nashorn.internal.parser.Parser.parse(Parser.java:282)
+	at org.openjdk.nashorn.internal.runtime.Context.compile(Context.java:1482)
+	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:1449)
+	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:759)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:528)
+	... 21 more"
+                }
             ],
             "ScriptList": [
+                {
+                    "Line": "tk.js"
+                }
             ]
         }
     ],
@@ -409,9 +1154,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 5,
     "Title": "",
-    "TotalTicksAlive": 208584L,
+    "TotalTicksAlive": 1363013L,
     "Rotation": [
-        -28.69519f,
+        313.32022f,
         0.0f
     ],
     "ShowName": 1,

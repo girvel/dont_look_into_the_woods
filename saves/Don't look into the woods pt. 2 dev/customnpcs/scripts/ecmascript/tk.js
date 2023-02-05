@@ -25,6 +25,17 @@ function iposEqual(p1, p2) {
     );
 }
 
+function findFactionByName(event, name) {
+    var factions = event.API.getFactions().list();
+    for (var i = 0; i < factions.size(); i++) {
+        var faction = factions[i];
+
+        if (faction.getName() == name) return faction;
+    }
+
+    return null;
+}
+
 function findDialogByName(event, name) {
     var categories = event.API.getDialogs().categories();
     for (var i = 0; i < categories.size(); i++) {
@@ -37,6 +48,8 @@ function findDialogByName(event, name) {
             }
         }
     }
+
+    return null;
 }
 
 function findPlayer(event) {
@@ -82,10 +95,6 @@ function create_navigator(from, to) {
             }
         },
 
-        move: function(event) {
-            event.npc.getAi().setMovingType(2);
-        },
-
         tick: function(event) {
             if (event.npc.getAi().getMovingType() == 2 && 
                 event.npc.getPos().distanceTo(
@@ -96,6 +105,10 @@ function create_navigator(from, to) {
                 event.npc.getAi().setAnimation(0);
                 event.npc.setHome(this._to[0], this._to[1], this._to[2]);
             }
+        },
+
+        move: function(event) {
+            event.npc.getAi().setMovingType(2);
         }
     };
 }
@@ -103,4 +116,14 @@ function create_navigator(from, to) {
 function setEnchantment(item, id, level) {
     item.removeEnchant(id);
     item.addEnchantment(id, level);
+}
+
+function isUnderCeiling(world, pos, height) {
+    for (var h = 1; h <= height; h++) {
+        if (!world.getBlock(pos.getX(), pos.getY() + h, pos.getZ()).isAir()) {
+            return true;
+        }
+    }
+
+    return false;
 }

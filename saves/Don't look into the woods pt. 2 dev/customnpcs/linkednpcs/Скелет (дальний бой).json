@@ -184,11 +184,11 @@
         "DirectLOS": 1b,
         "HealthRegen": 0,
         "VisibleAvailability": {
-            "AvailabilityQuestId": -1,
+            "AvailabilityQuestId": 2,
             "AvailabilityScoreboardType": 1,
             "AvailabilityFactionStance": 0,
             "AvailabilityScoreboard2Value": 1,
-            "AvailabilityQuest": 0,
+            "AvailabilityQuest": 1,
             "AvailabilityDialog4": 0,
             "AvailabilityScoreboardObjective": "",
             "AvailabilityDialog3": 0,

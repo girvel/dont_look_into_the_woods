@@ -133,31 +133,31 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 29981,
+    "HurtByTimestamp": 67370,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
             "Base": 20.0d,
             "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 5.0d,
@@ -185,6 +185,16 @@
                 "OptionType": 1
             },
             "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 97,
+                "Title": "-Б. Некромант.",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 1
         },
         {
             "NPCDialog": {
@@ -414,7 +424,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 2015315L,
+    "TotalTicksAlive": 2058621L,
     "Rotation": [
         352.71533f,
         0.0f

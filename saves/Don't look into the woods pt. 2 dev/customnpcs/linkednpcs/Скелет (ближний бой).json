@@ -106,7 +106,7 @@
         "WalkingRange": 2,
         "ShotCount": 1,
         "pDur": 5,
-        "StartPosNew": [I;-231,93,302],
+        "StartPosNew": [I;-236,93,315],
         "AttackRange": 2,
         "NpcKillLines": {
             "Lines": [
@@ -175,11 +175,11 @@
         "DirectLOS": 1b,
         "HealthRegen": 0,
         "VisibleAvailability": {
-            "AvailabilityQuestId": -1,
+            "AvailabilityQuestId": 2,
             "AvailabilityScoreboardType": 1,
             "AvailabilityFactionStance": 0,
             "AvailabilityScoreboard2Value": 1,
-            "AvailabilityQuest": 0,
+            "AvailabilityQuest": 1,
             "AvailabilityDialog4": 0,
             "AvailabilityScoreboardObjective": "",
             "AvailabilityDialog3": 0,
