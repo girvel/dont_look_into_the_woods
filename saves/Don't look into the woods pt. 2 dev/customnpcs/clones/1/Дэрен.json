@@ -95,9 +95,9 @@
     "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
-        0.0d,
+        0.040672048236932073d,
         -0.0784000015258789d,
-        0.0d
+        -0.0589062996593226d
     ],
     "CombatRegen": 0,
     "NpcsTimers": [
@@ -133,39 +133,39 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 70401,
+    "HurtByTimestamp": 32452,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 1.0d,
-            "Name": "forge:swim_speed"
-        },
-        {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         },
         {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 1.0d,
+            "Name": "forge:swim_speed"
         }
     ],
     "Invulnerable": 0b,
@@ -180,6 +180,26 @@
     "Weapons": [
     ],
     "NPCDialogOptions": [
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 101,
+                "Title": "А. Пшено",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 6
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 102,
+                "Title": "Б. Молчит",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 7
+        }
     ],
     "AggroRange": 16,
     "DirectLOS": 1b,
@@ -356,10 +376,10 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 383151L,
+    "TotalTicksAlive": 1294294L,
     "Rotation": [
-        90.000656f,
-        0.0f
+        218.99084f,
+        7.1204467f
     ],
     "ShowName": 1,
     "npcInteracting": 1b,

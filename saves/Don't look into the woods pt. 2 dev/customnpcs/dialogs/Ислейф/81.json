@@ -21,6 +21,26 @@
                 "DialogColor": 14737632,
                 "OptionType": 1
             }
+        },
+        {
+            "OptionSlot": 2,
+            "Option": {
+                "DialogCommand": "",
+                "Dialog": 109,
+                "Title": "А сейчас есть работа?",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            }
+        },
+        {
+            "OptionSlot": 3,
+            "Option": {
+                "DialogCommand": "",
+                "Dialog": 110,
+                "Title": "Я помог всем, кто пострадал от моих действий.",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            }
         }
     ],
     "AvailabilityScoreboardType": 1,
@@ -39,7 +59,7 @@
     "ModRev": 18,
     "DecreaseFaction1Points": 0b,
     "DialogQuest": -1,
-    "AvailabilityDialog2": 0,
+    "AvailabilityDialog2": 2,
     "OptionFactions1": -1,
     "AvailabilityDayTime": 0,
     "OptionFactions2": -1,
@@ -61,7 +81,7 @@
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
-    "AvailabilityDialog2Id": -1,
+    "AvailabilityDialog2Id": 112,
     "AvailabilityDialog3Id": -1,
     "AvailabilityDialog4Id": -1,
     "AvailabilityMinPlayerLevel": 0,
@@ -74,7 +94,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675323005499L,
+        "TimePast": 1675680712215L,
         "Time": 0L,
         "Subject": ""
     }

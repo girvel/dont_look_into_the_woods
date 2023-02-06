@@ -5,6 +5,21 @@
         }
     },
     "NpcInv": [
+        {
+            "Slot": 0b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:bone",
+            "Count": 1b,
+            "tag": {
+                "RepairCost": 0,
+                "display": {
+                    "Name": "{\"text\":\"Кость тролля\"}"
+                }
+            }
+        }
     ],
     "BossColor": 0,
     "PotionEffect": 0,
@@ -133,20 +148,12 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 95317,
+    "HurtByTimestamp": 9143,
     "pSpin": 1b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
-        {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
         {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
@@ -156,12 +163,20 @@
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 50.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
         },
         {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 50.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -185,6 +200,16 @@
         }
     ],
     "NPCDialogOptions": [
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 52,
+                "Title": "А. Плати деньги",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 0
+        }
     ],
     "AggroRange": 16,
     "DirectLOS": 1b,
@@ -396,7 +421,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 10,
     "Title": "",
-    "TotalTicksAlive": 152613L,
+    "TotalTicksAlive": 791408L,
     "Rotation": [
         256.21225f,
         0.0f

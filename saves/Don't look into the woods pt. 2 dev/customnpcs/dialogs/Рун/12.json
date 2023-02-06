@@ -28,7 +28,7 @@
     "AvailabilityScoreboardValue": 1,
     "DialogDisableEsc": 0b,
     "AvailabilityFaction": 0,
-    "DialogTitle": "ААА. Знает про помощь Шанеру",
+    "DialogTitle": "ААА. Обращайся",
     "AvailabilityDialog": 0,
     "AvailabilityScoreboard2Type": 1,
     "AvailabilityFaction2": 0,
@@ -54,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674656481811L,
+        "TimePast": 1675673138532L,
         "Time": 0L,
         "Subject": ""
     }

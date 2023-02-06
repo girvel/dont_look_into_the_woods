@@ -68,6 +68,7 @@ function create_navigator(from, to) {
         _to: to,
         _animation: 0,
         _dialog: undefined,
+        _path_enabled: true,
 
         animation: function(value) {
             this._animation = value;
@@ -79,10 +80,20 @@ function create_navigator(from, to) {
             return this;
         },
 
+        disable_path: function() {
+            this._path_enabled = false;
+            return this;
+        },
+
         init: function(event) {
-            if (findPlayer(event, event).hasReadDialog(
-                findDialogByName(event, this._dialog).getId()
-            )) return;
+            var dialog = findDialogByName(event, this._dialog);
+
+            if (!dialog) {
+                debug(event, 'Dialog "' + this._dialog + '" does not exist');
+                return;
+            }
+
+            if (findPlayer(event).hasReadDialog(dialog.getId())) return;
 
             event.npc.getAi().setMovingType(0);
             event.npc.getAi().setAnimation(this._animation);
@@ -96,7 +107,8 @@ function create_navigator(from, to) {
         },
 
         tick: function(event) {
-            if (event.npc.getAi().getMovingType() == 2 && 
+            if (this._path_enabled &&
+                event.npc.getAi().getMovingType() == 2 && 
                 event.npc.getPos().distanceTo(
                     event.API.getIPos(this._to[0], this._to[1], this._to[2])
                 ) <= 3
@@ -108,7 +120,12 @@ function create_navigator(from, to) {
         },
 
         move: function(event) {
-            event.npc.getAi().setMovingType(2);
+            if (this._path_enabled) {
+                event.npc.getAi().setMovingType(2);
+            }
+            else {
+                event.npc.setHome(this._to[0], this._to[1], this._to[2]);
+            }
         }
     };
 }

@@ -7,7 +7,7 @@
             "Option": {
                 "DialogCommand": "",
                 "Dialog": 94,
-                "Title": "<развязать> Да. Иди домой.",
+                "Title": "Да. Иди домой.",
                 "DialogColor": 14737632,
                 "OptionType": 1
             }
@@ -38,7 +38,7 @@
     "AvailabilityScoreboardValue": 1,
     "DialogDisableEsc": 0b,
     "AvailabilityFaction": 0,
-    "DialogTitle": "Б. Сидит связанный",
+    "DialogTitle": "Б. Сидит",
     "AvailabilityDialog": 2,
     "AvailabilityScoreboard2Type": 1,
     "AvailabilityFaction2": 0,
@@ -64,7 +64,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675585637664L,
+        "TimePast": 1675667414080L,
         "Time": 0L,
         "Subject": ""
     }

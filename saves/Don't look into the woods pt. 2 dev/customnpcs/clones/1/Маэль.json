@@ -133,35 +133,35 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 77285,
+    "HurtByTimestamp": 1519,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         },
         {
             "Base": 7.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 35.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
         },
         {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 35.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -205,6 +205,16 @@
                 "OptionType": 1
             },
             "DialogSlot": 7
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 100,
+                "Title": "В. Воскресить что-то?",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 8
         }
     ],
     "AggroRange": 16,
@@ -295,12 +305,12 @@
         "AvailabilityFaction2Id": -1,
         "AvailabilityScoreboardValue": 1,
         "AvailabilityFaction": 0,
-        "AvailabilityDialog": 0,
+        "AvailabilityDialog": 2,
         "AvailabilityScoreboard2Type": 1,
         "AvailabilityFaction2": 0,
         "AvailabilityFactionId": -1,
         "AvailabilityFaction2Stance": 0,
-        "AvailabilityDialogId": -1,
+        "AvailabilityDialogId": 91,
         "AvailabilityQuest4Id": -1,
         "AvailabilityQuest3Id": -1,
         "AvailabilityQuest2Id": -1,
@@ -310,7 +320,7 @@
         "AvailabilityMinPlayerLevel": 0
     },
     "minDelay": 20,
-    "DoorInteract": 2,
+    "DoorInteract": 1,
     "MoveSpeed": 5,
     "TransformEditingModus": 0b,
     "UsingSkinUrl": 0b,
@@ -411,10 +421,20 @@
     "MarkovGeneratorId": 3,
     "Scripts": [
         {
-            "Script": "function init(event) {
+            "Script": "var navigator = create_navigator([-241, 98, 317], [-168, 70, -128])
+    .disable_path()
+    .dialog(\"БАБ. Жить с людьми\");
+
+function init(event) {
     var inventory = event.npc.getInventory();
     inventory.setLeftHand(event.npc.getWorld().createItem(\"minecraft:air\", 1));
     inventory.setRightHand(event.npc.getWorld().createItem(\"minecraft:air\", 1));
+    
+    navigator.init(event);
+}
+
+function dialogClose(event) {
+    navigator.dialogClose(event);
 }
 
 function target(event) {
@@ -431,6 +451,9 @@ function targetLost(event) {
             "Console": [
             ],
             "ScriptList": [
+                {
+                    "Line": "tk.js"
+                }
             ]
         }
     ],
@@ -440,9 +463,9 @@ function targetLost(event) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 12,
     "Title": "",
-    "TotalTicksAlive": 358140L,
+    "TotalTicksAlive": 454015L,
     "Rotation": [
-        299.93573f,
+        99.29944f,
         0.0f
     ],
     "ShowName": 1,

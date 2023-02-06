@@ -34,7 +34,7 @@
     "AvailabilityFaction2": 0,
     "AvailabilityFactionId": -1,
     "AvailabilityFaction2Stance": 0,
-    "DialogCommand": "/give @p minecraft:bone{display: {Name: \"Кость тролля\"}}",
+    "DialogCommand": "/give @p minecraft:bone{display: {Name: '{\"text\":\"Кость тролля\"}'}}",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
     "DialogText": "Ладно -- ухожу. Держи -- подарок.",
@@ -54,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675256612261L,
+        "TimePast": 1675673402662L,
         "Time": 0L,
         "Subject": ""
     }

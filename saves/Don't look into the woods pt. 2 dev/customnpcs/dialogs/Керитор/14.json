@@ -47,7 +47,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": 16,
     "OptionFaction2Points": 100,
-    "DialogText": "О, здравствуй. Ты Кен, лесничий, не так ли?",
+    "DialogText": "О, здравствуй. Ты @p, лесничий, не так ли?",
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
@@ -64,7 +64,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675257642504L,
+        "TimePast": 1675673155553L,
         "Time": 0L,
         "Subject": ""
     }

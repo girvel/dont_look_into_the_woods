@@ -64,6 +64,37 @@
         0.085f
     ],
     "BurnInSun": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:cookie",
+                "Count": 24b
+            },
+            {
+                "Slot": 3b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:bread",
+                "Count": 10b
+            },
+            {
+                "Slot": 6b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:pumpkin_pie",
+                "Count": 6b
+            }
+        ]
+    },
     "StandingState": 0,
     "AttackInvisible": 0b,
     "NpcInteractNPCLines": {
@@ -74,6 +105,7 @@
     "WalkingRange": 10,
     "ShotCount": 1,
     "pDur": 5,
+    "TraderIgnoreDamage": 0b,
     "AttackRange": 2,
     "NpcKillLines": {
         "Lines": [
@@ -92,7 +124,7 @@
     "pArea": 0,
     "DeathTime": 0s,
     "pImpact": 0,
-    "MoveState": 1,
+    "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
         0.0d,
@@ -115,6 +147,7 @@
         "Lines": [
         ]
     },
+    "TraderMarket": "",
     "Fire": -1s,
     "ArmorItems": [
         {
@@ -133,7 +166,56 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 52629,
+    "HurtByTimestamp": 46789,
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 3b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 6b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            }
+        ]
+    },
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
@@ -144,24 +226,24 @@
             "Name": "minecraft:generic.follow_range"
         },
         {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
         },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
         },
         {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -169,7 +251,7 @@
     "NoFallDamage": 0b,
     "AbsorptionAmount": 0.0f,
     "TransformHasRole": 0b,
-    "Name": "Керритор",
+    "Name": "Керитор",
     "FallDistance": 0.0f,
     "SkinColor": 16777215,
     "NpcIdleSound": "",
@@ -185,6 +267,26 @@
                 "OptionType": 1
             },
             "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 107,
+                "Title": "-Б. Руины Анселя",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 1
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 108,
+                "Title": "-В. Знает что ГГ накосячил",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 2
         },
         {
             "NPCDialog": {
@@ -316,6 +418,7 @@
     "UsingSkinUrl": 0b,
     "SkinUrl": "",
     "CanSwim": 1b,
+    "TraderIgnoreNBT": 0b,
     "GroundSound": "minecraft:block.stone.break",
     "MaxHealth": 20,
     "HideBodyWhenKilled": 0b,
@@ -323,7 +426,7 @@
     "PotionDuration": 5,
     "maxDelay": 40,
     "ScriptEnabled": 1b,
-    "Role": 0,
+    "Role": 1,
     "DropChance": [
         {
             "Integer": 100,
@@ -1139,6 +1242,44 @@ Caused by: org.openjdk.nashorn.internal.runtime.ParserException: <eval>:145:8 Ex
 	at org.openjdk.nashorn.internal.runtime.Context.compileScript(Context.java:759)
 	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.compileImpl(NashornScriptEngine.java:528)
 	... 21 more"
+                },
+                {
+                    "Long": 1675664448394L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 118
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$31$2751A$\\^eval\\_.create_navigator#init(<eval>:118)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$30$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
                 }
             ],
             "ScriptList": [
@@ -1154,9 +1295,9 @@ Caused by: org.openjdk.nashorn.internal.runtime.ParserException: <eval>:145:8 Ex
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 5,
     "Title": "",
-    "TotalTicksAlive": 1363013L,
+    "TotalTicksAlive": 1555194L,
     "Rotation": [
-        313.32022f,
+        297.81854f,
         0.0f
     ],
     "ShowName": 1,

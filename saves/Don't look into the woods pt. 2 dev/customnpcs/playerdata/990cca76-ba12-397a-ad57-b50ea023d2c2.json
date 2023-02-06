@@ -9,7 +9,7 @@
             "Faction": 0
         },
         {
-            "Points": 0,
+            "Points": 2000,
             "Faction": 2
         },
         {
@@ -19,6 +19,10 @@
         {
             "Points": 0,
             "Faction": 8
+        },
+        {
+            "Points": 1000,
+            "Faction": 9
         },
         {
             "Points": 2000,
@@ -38,6 +42,22 @@
             {
                 "Quest": 2,
                 "Date": 1675544448056L
+            },
+            {
+                "Quest": 5,
+                "Date": 7045863L
+            },
+            {
+                "Quest": 6,
+                "Date": 7049223L
+            },
+            {
+                "Quest": 7,
+                "Date": 7022444L
+            },
+            {
+                "Quest": 8,
+                "Date": 7023954L
             }
         ],
         "ActiveQuests": [
@@ -46,10 +66,61 @@
     "PlayerCompanionId": 0,
     "DialogData": [
         {
+            "Dialog": 70
+        },
+        {
+            "Dialog": 71
+        },
+        {
+            "Dialog": 8
+        },
+        {
+            "Dialog": 72
+        },
+        {
+            "Dialog": 9
+        },
+        {
+            "Dialog": 10
+        },
+        {
+            "Dialog": 11
+        },
+        {
+            "Dialog": 77
+        },
+        {
+            "Dialog": 14
+        },
+        {
+            "Dialog": 78
+        },
+        {
+            "Dialog": 15
+        },
+        {
+            "Dialog": 79
+        },
+        {
+            "Dialog": 16
+        },
+        {
+            "Dialog": 80
+        },
+        {
             "Dialog": 81
         },
         {
+            "Dialog": 82
+        },
+        {
+            "Dialog": 83
+        },
+        {
             "Dialog": 85
+        },
+        {
+            "Dialog": 86
         },
         {
             "Dialog": 87
@@ -61,22 +132,55 @@
             "Dialog": 89
         },
         {
-            "Dialog": 41
-        },
-        {
             "Dialog": 90
         },
         {
-            "Dialog": 58
+            "Dialog": 92
         },
         {
             "Dialog": 93
         },
         {
-            "Dialog": 61
+            "Dialog": 94
         },
         {
-            "Dialog": 94
+            "Dialog": 102
+        },
+        {
+            "Dialog": 103
+        },
+        {
+            "Dialog": 104
+        },
+        {
+            "Dialog": 41
+        },
+        {
+            "Dialog": 108
+        },
+        {
+            "Dialog": 52
+        },
+        {
+            "Dialog": 53
+        },
+        {
+            "Dialog": 54
+        },
+        {
+            "Dialog": 56
+        },
+        {
+            "Dialog": 57
+        },
+        {
+            "Dialog": 58
+        },
+        {
+            "Dialog": 59
+        },
+        {
+            "Dialog": 61
         }
     ],
     "ItemGiverChained": [

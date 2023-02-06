@@ -6,8 +6,8 @@
     },
     "NpcInv": [
     ],
-    "BossColor": 0,
-    "PotionEffect": 0,
+    "BossColor": 5,
+    "PotionEffect": 15,
     "Size": 5,
     "stopAndInteract": 1b,
     "Resistances": {
@@ -16,11 +16,11 @@
         "Knockback": 1.0f,
         "Melee": 1.0f
     },
-    "BossBar": 0b,
-    "RespawnTime": 20,
+    "BossBar": 2b,
+    "RespawnTime": 0,
     "NpcAngrySound": "",
     "ReactsToFire": 0b,
-    "IgnoreCobweb": 0b,
+    "IgnoreCobweb": 1b,
     "PositionOffsetZ": 5.0f,
     "PositionOffsetY": 5.0f,
     "PositionOffsetX": 5.0f,
@@ -37,14 +37,14 @@
         ]
     },
     "DefendFaction": 0b,
-    "FireIndirect": 0,
+    "FireIndirect": 2,
     "NpcVisible": 2,
     "LinkedNpcName": "",
     "NpcScenes": {
         "Scenes": [
         ]
     },
-    "HitSound": "minecraft:entity.arrow.hit",
+    "HitSound": "minecraft:entity.firework_rocket.blast",
     "FindShelter": 2,
     "Air": 300s,
     "Orientation": 0,
@@ -55,7 +55,7 @@
         {
         }
     ],
-    "KnockBack": 0,
+    "KnockBack": 4,
     "TransformHasJob": 0b,
     "ArmorDropChances": [
         0.085f,
@@ -65,7 +65,7 @@
     ],
     "BurnInSun": 0b,
     "StandingState": 0,
-    "AttackInvisible": 0b,
+    "AttackInvisible": 1b,
     "NpcInteractNPCLines": {
         "Lines": [
         ]
@@ -79,19 +79,19 @@
         "Lines": [
         ]
     },
-    "PotionImmune": 0b,
+    "PotionImmune": 1b,
     "AvoidsSun": 0b,
     "Texture": "customnpcs:textures/entity/elffemale/elfqueen.png",
     "NpcJob": 0,
-    "BurstCount": 1,
+    "BurstCount": 15,
     "NpcAttackLines": {
         "Lines": [
         ]
     },
     "pSpeed": 10,
-    "pArea": 0,
+    "pArea": 1,
     "DeathTime": 0s,
-    "pImpact": 0,
+    "pImpact": 3,
     "MoveState": 0,
     "pRender3D": 1b,
     "Motion": [
@@ -99,18 +99,18 @@
         -0.0784000015258789d,
         0.0d
     ],
-    "CombatRegen": 0,
+    "CombatRegen": 1,
     "NpcsTimers": [
     ],
     "MarkovGender": 0,
-    "pEffect": 0,
-    "DistanceToMelee": 0,
+    "pEffect": 20,
+    "DistanceToMelee": 2,
     "NpcStepSound": "",
-    "FireRate": 5,
+    "FireRate": 2,
     "LeftHanded": 0b,
     "pEffAmp": 0,
     "OnGround": 1b,
-    "ImmuneToFire": 0b,
+    "ImmuneToFire": 1b,
     "NpcKilledLines": {
         "Lines": [
         ]
@@ -127,46 +127,50 @@
         }
     ],
     "DisablePitch": 0b,
-    "pPhysics": 1b,
+    "pPhysics": 0b,
     "TransformHasInv": 0b,
     "NpcInteractLines": {
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 526,
+    "HurtByTimestamp": 6033,
     "pSpin": 0b,
-    "NpcHurtSound": "minecraft:entity.player.hurt",
-    "pTrail": 0,
-    "CreatureType": 0,
+    "NpcHurtSound": "",
+    "pTrail": 2,
+    "CreatureType": 1,
     "Attributes": [
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
         {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         },
         {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 1000.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 1.0d,
+            "Name": "forge:swim_speed"
         }
     ],
     "Invulnerable": 0b,
     "TransformHasDisplay": 0b,
-    "NoFallDamage": 0b,
+    "NoFallDamage": 1b,
     "AbsorptionAmount": 0.0f,
     "TransformHasRole": 0b,
     "Name": "Лилу",
@@ -174,6 +178,15 @@
     "SkinColor": 16777215,
     "NpcIdleSound": "",
     "Weapons": [
+        {
+            "Slot": 1b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:nether_star",
+            "Count": 1b
+        }
     ],
     "NPCDialogOptions": [
         {
@@ -195,10 +208,20 @@
                 "OptionType": 1
             },
             "DialogSlot": 1
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 49,
+                "Title": "В. Ой",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 2
         }
     ],
-    "AggroRange": 16,
-    "DirectLOS": 1b,
+    "AggroRange": 64,
+    "DirectLOS": 0b,
     "HealthRegen": 1,
     "ForgeCaps": {
     },
@@ -300,21 +323,57 @@
         "AvailabilityMinPlayerLevel": 0
     },
     "minDelay": 20,
-    "DoorInteract": 2,
+    "DoorInteract": 1,
     "MoveSpeed": 5,
     "TransformEditingModus": 0b,
     "UsingSkinUrl": 0b,
     "SkinUrl": "",
     "CanSwim": 1b,
-    "GroundSound": "minecraft:block.stone.break",
-    "MaxHealth": 20,
+    "GroundSound": "",
+    "MaxHealth": 1000,
     "HideBodyWhenKilled": 0b,
-    "AttackSpeed": 20,
+    "AttackSpeed": 10,
     "PotionDuration": 5,
     "maxDelay": 40,
     "ScriptEnabled": 0b,
     "Role": 0,
     "DropChance": [
+        {
+            "Integer": 100,
+            "Slot": 0
+        },
+        {
+            "Integer": 100,
+            "Slot": 1
+        },
+        {
+            "Integer": 100,
+            "Slot": 2
+        },
+        {
+            "Integer": 100,
+            "Slot": 3
+        },
+        {
+            "Integer": 100,
+            "Slot": 4
+        },
+        {
+            "Integer": 100,
+            "Slot": 5
+        },
+        {
+            "Integer": 100,
+            "Slot": 6
+        },
+        {
+            "Integer": 100,
+            "Slot": 7
+        },
+        {
+            "Integer": 100,
+            "Slot": 8
+        }
     ],
     "FactionPoints": {
         "DecreaseFaction1Points": 0b,
@@ -324,12 +383,12 @@
         "OptionFaction1Points": 100,
         "DecreaseFaction2Points": 0b
     },
-    "pDamage": 4,
+    "pDamage": 12,
     "KilledTime": 0L,
     "AimWhileShooting": 0b,
     "CanPickUpLoot": 0b,
     "AttackOtherFactions": 0b,
-    "CanDrown": 1b,
+    "CanDrown": 0b,
     "pSize": 5,
     "CanSprint": 0b,
     "CanLeap": 0b,
@@ -348,37 +407,37 @@
     "MaxExp": 0,
     "OrderedLines": 0b,
     "PortalCooldown": 0,
-    "pGlows": 0b,
+    "pGlows": 1b,
     "TransformHasAdvanced": 0b,
     "TransformHasStats": 0b,
     "MovementType": 0,
-    "FiringSound": "minecraft:entity.arrow.shoot",
+    "FiringSound": "minecraft:entity.firework_rocket.launch",
     "ModRev": 18,
-    "Accuracy": 60,
+    "Accuracy": 5,
     "MinExp": 0,
     "Armor": [
     ],
     "CloakTexture": "",
     "GlowTexture": "",
-    "MaxFiringRange": 15,
-    "pXlr8": 0b,
+    "MaxFiringRange": 45,
+    "pXlr8": 1b,
     "MarkovGeneratorId": 4,
     "Scripts": [
     ],
-    "Health": 20.0f,
+    "Health": 1000.0f,
     "pStick": 0b,
     "MovingPause": 1b,
-    "NpcDeathSound": "minecraft:entity.player.hurt",
-    "FactionID": 0,
+    "NpcDeathSound": "",
+    "FactionID": 9,
     "Title": "",
-    "TotalTicksAlive": 76391L,
+    "TotalTicksAlive": 1181425L,
     "Rotation": [
-        -117.00232f,
+        39.72917f,
         0.0f
     ],
     "ShowName": 1,
     "npcInteracting": 1b,
-    "AvoidsWater": 0b,
+    "AvoidsWater": 1b,
     "NoLivingAnimation": 0b,
-    "SpawnCycle": 0
+    "SpawnCycle": 3
 }

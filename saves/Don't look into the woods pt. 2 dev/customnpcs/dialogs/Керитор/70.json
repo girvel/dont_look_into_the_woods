@@ -11,6 +11,16 @@
                 "DialogColor": 14737632,
                 "OptionType": 1
             }
+        },
+        {
+            "OptionSlot": 1,
+            "Option": {
+                "DialogCommand": "",
+                "Dialog": -1,
+                "Title": "Говорят, ты хлебом торгуешь?",
+                "DialogColor": 14737632,
+                "OptionType": 3
+            }
         }
     ],
     "AvailabilityScoreboardType": 1,
@@ -64,7 +74,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675258551416L,
+        "TimePast": 1675682681845L,
         "Time": 0L,
         "Subject": ""
     }

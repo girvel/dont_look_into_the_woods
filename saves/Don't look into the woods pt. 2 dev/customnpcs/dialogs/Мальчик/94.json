@@ -37,7 +37,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
-    "DialogText": "Ладно, спасибо",
+    "DialogText": "Ладно.",
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
@@ -54,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675587960511L,
+        "TimePast": 1675667423514L,
         "Time": 0L,
         "Subject": ""
     }
