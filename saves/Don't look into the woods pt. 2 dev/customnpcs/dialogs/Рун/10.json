@@ -29,7 +29,7 @@
     "ModRev": 18,
     "DecreaseFaction1Points": 0b,
     "DialogQuest": -1,
-    "AvailabilityDialog2": 0,
+    "AvailabilityDialog2": 2,
     "OptionFactions1": -1,
     "AvailabilityDayTime": 0,
     "OptionFactions2": -1,
@@ -51,7 +51,7 @@
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
-    "AvailabilityDialog2Id": -1,
+    "AvailabilityDialog2Id": 122,
     "AvailabilityDialog3Id": -1,
     "AvailabilityDialog4Id": -1,
     "AvailabilityMinPlayerLevel": 0,
@@ -64,7 +64,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675673099851L,
+        "TimePast": 1676021837905L,
         "Time": 0L,
         "Subject": ""
     }

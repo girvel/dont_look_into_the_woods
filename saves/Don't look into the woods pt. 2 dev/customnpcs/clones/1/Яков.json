@@ -216,39 +216,39 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 52599,
+    "HurtByTimestamp": 15249,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 0.0d,
+            "Name": "minecraft:generic.armor"
         },
         {
             "Base": 0.20000000298023224d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 0.0d,
-            "Name": "minecraft:generic.armor"
-        },
-        {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
         },
         {
             "Base": 0.0d,
             "Name": "minecraft:generic.armor_toughness"
         },
         {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
         },
         {
             "Base": 0.4000000059604645d,
@@ -270,12 +270,22 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
+                "Dialog": 116,
+                "Title": "-А. Тролль",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
                 "Dialog": 17,
                 "Title": "А. Бумаги?",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
-            "DialogSlot": 0
+            "DialogSlot": 8
         },
         {
             "NPCDialog": {
@@ -285,7 +295,7 @@
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
-            "DialogSlot": 1
+            "DialogSlot": 9
         },
         {
             "NPCDialog": {
@@ -295,7 +305,7 @@
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
-            "DialogSlot": 2
+            "DialogSlot": 10
         }
     ],
     "AggroRange": 16,
@@ -582,10 +592,10 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 2521610L,
+    "TotalTicksAlive": 3906646L,
     "Rotation": [
         89.01204f,
-        3.7805326f
+        0.0f
     ],
     "ShowName": 1,
     "npcInteracting": 0b,
