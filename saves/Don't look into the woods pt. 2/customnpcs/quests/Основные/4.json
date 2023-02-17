@@ -1,0 +1,61 @@
+{
+    "CompleterNpc": "Самбор",
+    "NextQuestId": -1,
+    "RandomReward": 0b,
+    "QuestRepeat": 0,
+    "QuestCompletion": 0,
+    "Title": "Позвать трактирщика",
+    "Text": "У торговца сломалась телега, позвать трактирщика.",
+    "QuestFactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "RewardExp": 0,
+    "QuestCommand": "",
+    "QuestDialogs": [
+        {
+            "Integer": 69,
+            "Slot": 0
+        }
+    ],
+    "ModRev": 18,
+    "Type": 1,
+    "QuestMail": {
+        "Sender": "",
+        "BeenRead": 0b,
+        "Message": {
+        },
+        "MailItems": [
+        ],
+        "MailQuest": -1,
+        "TimePast": 1675268754239L,
+        "Time": 0L,
+        "Subject": ""
+    },
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 16b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            }
+        ]
+    },
+    "CompleteText": "Самбор: Что, гроши свои хочешь? Ты ж не сделал нихрена.
+
+На, подавись!"
+}

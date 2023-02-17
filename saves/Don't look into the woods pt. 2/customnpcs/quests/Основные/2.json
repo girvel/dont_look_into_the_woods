@@ -1,0 +1,44 @@
+{
+    "CompleterNpc": "Лилу",
+    "NextQuestId": -1,
+    "RandomReward": 0b,
+    "QuestRepeat": 0,
+    "QuestCompletion": 1,
+    "Title": "Починить монументы",
+    "Text": "Активировать три монумента.",
+    "QuestFactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "RewardExp": 0,
+    "QuestCommand": "",
+    "ModRev": 18,
+    "Type": 5,
+    "QuestMail": {
+        "Sender": "",
+        "BeenRead": 0b,
+        "Message": {
+        },
+        "MailItems": [
+        ],
+        "MailQuest": -1,
+        "TimePast": 1675086913400L,
+        "Time": 0L,
+        "Subject": ""
+    },
+    "Rewards": {
+        "NpcMiscInv": [
+        ]
+    },
+    "CompleteText": "",
+    "QuestManual": [
+        {
+            "Value": 3,
+            "Slot": "obelisks_fixed"
+        }
+    ]
+}
