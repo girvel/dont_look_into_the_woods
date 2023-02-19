@@ -5,8 +5,24 @@
     ],
     "FactionData": [
         {
+            "Points": 2000,
+            "Faction": 0
+        },
+        {
+            "Points": 0,
+            "Faction": 2
+        },
+        {
             "Points": 1,
             "Faction": 6
+        },
+        {
+            "Points": 1000,
+            "Faction": 8
+        },
+        {
+            "Points": 0,
+            "Faction": 9
         }
     ],
     "BankData": [
@@ -15,79 +31,38 @@
     ],
     "QuestData": {
         "CompletedQuests": [
-            {
-                "Quest": 1,
-                "Date": 7488830L
-            },
-            {
-                "Quest": 4,
-                "Date": 7496877L
-            },
-            {
-                "Quest": 5,
-                "Date": 7500668L
-            },
-            {
-                "Quest": 6,
-                "Date": 7501170L
-            },
-            {
-                "Quest": 14,
-                "Date": 7498637L
-            }
         ],
         "ActiveQuests": [
             {
                 "QuestCompleted": 0b,
                 "ExtraData": {
                 },
-                "Quest": 2
-            },
-            {
-                "QuestCompleted": 0b,
-                "ExtraData": {
-                },
-                "Quest": 13
+                "Quest": 14
             }
         ]
     },
     "PlayerCompanionId": 0,
     "DialogData": [
         {
-            "Dialog": 1
+            "Dialog": 32
         },
         {
-            "Dialog": 2
+            "Dialog": 128
         },
         {
-            "Dialog": 3
+            "Dialog": 129
         },
         {
-            "Dialog": 4
+            "Dialog": 130
         },
         {
-            "Dialog": 5
+            "Dialog": 131
         },
         {
-            "Dialog": 6
+            "Dialog": 132
         },
         {
-            "Dialog": 8
-        },
-        {
-            "Dialog": 9
-        },
-        {
-            "Dialog": 10
-        },
-        {
-            "Dialog": 11
-        },
-        {
-            "Dialog": 12
-        },
-        {
-            "Dialog": 13
+            "Dialog": 40
         },
         {
             "Dialog": 14
@@ -96,151 +71,16 @@
             "Dialog": 15
         },
         {
-            "Dialog": 16
-        },
-        {
-            "Dialog": 17
-        },
-        {
-            "Dialog": 18
-        },
-        {
-            "Dialog": 19
-        },
-        {
-            "Dialog": 20
-        },
-        {
-            "Dialog": 21
-        },
-        {
-            "Dialog": 22
-        },
-        {
-            "Dialog": 23
-        },
-        {
-            "Dialog": 24
-        },
-        {
-            "Dialog": 25
-        },
-        {
-            "Dialog": 26
-        },
-        {
-            "Dialog": 27
-        },
-        {
-            "Dialog": 28
-        },
-        {
-            "Dialog": 29
-        },
-        {
-            "Dialog": 30
-        },
-        {
-            "Dialog": 32
-        },
-        {
-            "Dialog": 33
-        },
-        {
-            "Dialog": 34
-        },
-        {
-            "Dialog": 35
-        },
-        {
-            "Dialog": 36
-        },
-        {
-            "Dialog": 37
-        },
-        {
-            "Dialog": 38
-        },
-        {
-            "Dialog": 39
-        },
-        {
-            "Dialog": 60
+            "Dialog": 80
         },
         {
             "Dialog": 61
         },
         {
-            "Dialog": 62
+            "Dialog": 126
         },
         {
-            "Dialog": 63
-        },
-        {
-            "Dialog": 64
-        },
-        {
-            "Dialog": 65
-        },
-        {
-            "Dialog": 67
-        },
-        {
-            "Dialog": 68
-        },
-        {
-            "Dialog": 69
-        },
-        {
-            "Dialog": 70
-        },
-        {
-            "Dialog": 71
-        },
-        {
-            "Dialog": 72
-        },
-        {
-            "Dialog": 74
-        },
-        {
-            "Dialog": 75
-        },
-        {
-            "Dialog": 76
-        },
-        {
-            "Dialog": 77
-        },
-        {
-            "Dialog": 78
-        },
-        {
-            "Dialog": 79
-        },
-        {
-            "Dialog": 80
-        },
-        {
-            "Dialog": 81
-        },
-        {
-            "Dialog": 82
-        },
-        {
-            "Dialog": 83
-        },
-        {
-            "Dialog": 107
-        },
-        {
-            "Dialog": 117
-        },
-        {
-            "Dialog": 123
-        },
-        {
-            "Dialog": 125
+            "Dialog": 127
         }
     ],
     "ItemGiverChained": [

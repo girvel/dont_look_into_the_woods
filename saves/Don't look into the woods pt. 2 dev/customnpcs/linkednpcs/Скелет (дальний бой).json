@@ -68,7 +68,7 @@
             "Melee": 1.0f
         },
         "BossBar": 0b,
-        "RespawnTime": 600,
+        "RespawnTime": 0,
         "NpcAngrySound": "",
         "ReactsToFire": 0b,
         "IgnoreCobweb": 0b,
@@ -106,7 +106,7 @@
         "WalkingRange": 2,
         "ShotCount": 1,
         "pDur": 5,
-        "StartPosNew": [I;-237,93,312],
+        "StartPosNew": [I;-230,93,316],
         "AttackRange": 2,
         "NpcKillLines": {
             "Lines": [
@@ -374,7 +374,7 @@
         "npcInteracting": 0b,
         "AvoidsWater": 0b,
         "NoLivingAnimation": 0b,
-        "SpawnCycle": 0
+        "SpawnCycle": 3
     },
     "LinkedName": "Скелет (дальний бой)"
 }

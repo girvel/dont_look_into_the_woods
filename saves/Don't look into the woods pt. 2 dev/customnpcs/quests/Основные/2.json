@@ -7,11 +7,11 @@
     "Title": "Починить монументы",
     "Text": "Активировать три монумента.",
     "QuestFactionPoints": {
-        "DecreaseFaction1Points": 0b,
+        "DecreaseFaction1Points": 1b,
         "OptionFaction2Points": 100,
-        "OptionFactions1": -1,
+        "OptionFactions1": 8,
         "OptionFactions2": -1,
-        "OptionFaction1Points": 100,
+        "OptionFaction1Points": 1000,
         "DecreaseFaction2Points": 0b
     },
     "RewardExp": 0,
@@ -26,7 +26,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675086913400L,
+        "TimePast": 1676808517711L,
         "Time": 0L,
         "Subject": ""
     },

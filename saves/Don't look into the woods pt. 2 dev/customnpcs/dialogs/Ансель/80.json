@@ -17,14 +17,14 @@
     "AvailabilityScoreboard2Objective": "",
     "AvailabilityQuest4": 0,
     "ModRev": 18,
-    "DecreaseFaction1Points": 0b,
+    "DecreaseFaction1Points": 1b,
     "DialogQuest": -1,
     "AvailabilityDialog2": 0,
-    "OptionFactions1": -1,
+    "OptionFactions1": 14,
     "AvailabilityDayTime": 0,
     "OptionFactions2": -1,
     "AvailabilityFaction2Id": -1,
-    "OptionFaction1Points": 100,
+    "OptionFaction1Points": 1000,
     "AvailabilityScoreboardValue": 1,
     "DialogDisableEsc": 0b,
     "AvailabilityFaction": 0,
@@ -54,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675280279247L,
+        "TimePast": 1676807893379L,
         "Time": 0L,
         "Subject": ""
     }

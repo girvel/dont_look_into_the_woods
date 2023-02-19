@@ -73,7 +73,7 @@
     "HurtTime": 0s,
     "WalkingRange": 10,
     "ShotCount": 1,
-    "pDur": 5,
+    "pDur": 60,
     "AttackRange": 2,
     "NpcKillLines": {
         "Lines": [
@@ -133,19 +133,19 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 6033,
+    "HurtByTimestamp": 53403,
     "pSpin": 0b,
     "NpcHurtSound": "",
     "pTrail": 2,
     "CreatureType": 1,
     "Attributes": [
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
+            "Base": 1000.0d,
+            "Name": "minecraft:generic.max_health"
         },
         {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 0.08d,
@@ -156,16 +156,16 @@
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
-            "Base": 1000.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
         },
         {
             "Base": 1.0d,
             "Name": "forge:swim_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
@@ -335,7 +335,7 @@
     "AttackSpeed": 10,
     "PotionDuration": 5,
     "maxDelay": 40,
-    "ScriptEnabled": 0b,
+    "ScriptEnabled": 1b,
     "Role": 0,
     "DropChance": [
         {
@@ -413,7 +413,7 @@
     "MovementType": 0,
     "FiringSound": "minecraft:entity.firework_rocket.launch",
     "ModRev": 18,
-    "Accuracy": 5,
+    "Accuracy": 10,
     "MinExp": 0,
     "Armor": [
     ],
@@ -423,6 +423,20 @@
     "pXlr8": 1b,
     "MarkovGeneratorId": 4,
     "Scripts": [
+        {
+            "Script": "function target(event) {
+    if (event.entity === findPlayer(event)) {
+        event.entity.setSpawnpoint(-264, 28, -37);
+    }
+}",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "tk.js"
+                }
+            ]
+        }
     ],
     "Health": 1000.0f,
     "pStick": 0b,
@@ -430,9 +444,9 @@
     "NpcDeathSound": "",
     "FactionID": 9,
     "Title": "",
-    "TotalTicksAlive": 1181425L,
+    "TotalTicksAlive": 1414566L,
     "Rotation": [
-        39.72917f,
+        80.99811f,
         0.0f
     ],
     "ShowName": 1,

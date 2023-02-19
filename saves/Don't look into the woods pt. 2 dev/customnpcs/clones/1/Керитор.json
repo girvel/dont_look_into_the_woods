@@ -127,9 +127,9 @@
     "MoveState": 1,
     "pRender3D": 1b,
     "Motion": [
-        0.0d,
+        -0.07312310831189806d,
         -0.0784000015258789d,
-        0.0d
+        -4.488762666015116E-5d
     ],
     "CombatRegen": 0,
     "NpcsTimers": [
@@ -222,14 +222,6 @@
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
@@ -242,8 +234,16 @@
             "Name": "minecraft:generic.follow_range"
         },
         {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         }
     ],
     "Invulnerable": 0b,
@@ -489,8 +489,8 @@
             ]
         }
     },
-    "MovingState": 0,
-    "MovingPos": 0,
+    "MovingState": 2,
+    "MovingPos": 14,
     "PotionAmp": 0,
     "OnAttack": 0,
     "FallFlying": 0b,
@@ -1280,6 +1280,158 @@ Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from und
 	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
 	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
 	... 18 more"
+                },
+                {
+                    "Long": 1676638591485L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 131
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:131 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2892A$\\^eval\\_.create_navigator#init(<eval>:131)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1676639596485L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 131
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:131 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2892A$\\^eval\\_.create_navigator#init(<eval>:131)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1676639635801L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 131
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:131 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2892A$\\^eval\\_.create_navigator#init(<eval>:131)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
+                },
+                {
+                    "Long": 1676784424730L,
+                    "String": "javax.script.ScriptException: TypeError: Cannot read property \"hasReadDialog\" from undefined in <eval> at line number 131
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:463)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:385)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeFunction(NashornScriptEngine.java:186)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:151)
+	at noppes.npcs.controllers.ScriptContainer.run(ScriptContainer.java:108)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:58)
+	at noppes.npcs.EventHooks.onNPCInit(EventHooks.java:90)
+	at noppes.npcs.entity.data.DataScript.runScript(DataScript.java:55)
+	at noppes.npcs.EventHooks.onNPCTick(EventHooks.java:106)
+	at noppes.npcs.entity.EntityNPCInterface.func_70071_h_(EntityNPCInterface.java:219)
+	at noppes.npcs.entity.EntityCustomNpc.func_70071_h_(EntityCustomNpc.java:50)
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:612)
+	at net.minecraft.world.World.func_217390_a(World.java:554)
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:405)
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642)
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+Caused by: <eval>:131 TypeError: Cannot read property \"hasReadDialog\" from undefined
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:212)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:184)
+	at org.openjdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:171)
+	at org.openjdk.nashorn.internal.runtime.Undefined.get(Undefined.java:161)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$25$2892A$\\^eval\\_.create_navigator#init(<eval>:131)
+	at org.openjdk.nashorn.internal.scripts.Script$Recompilation$24$121A$\\^eval\\_.init(<eval>:6)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:648)
+	at org.openjdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:513)
+	at org.openjdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:520)
+	at org.openjdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:187)
+	at org.openjdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:379)
+	... 18 more"
                 }
             ],
             "ScriptList": [
@@ -1291,14 +1443,14 @@ Caused by: <eval>:118 TypeError: Cannot read property \"hasReadDialog\" from und
     ],
     "Health": 20.0f,
     "pStick": 0b,
-    "MovingPause": 1b,
+    "MovingPause": 0b,
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 5,
     "Title": "",
-    "TotalTicksAlive": 1566434L,
+    "TotalTicksAlive": 1819357L,
     "Rotation": [
-        270.00015f,
-        0.0f
+        90.07832f,
+        0.9749567f
     ],
     "ShowName": 1,
     "npcInteracting": 1b,

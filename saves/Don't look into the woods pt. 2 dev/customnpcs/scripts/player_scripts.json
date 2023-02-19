@@ -1,8 +1,15 @@
 {
-    "ScriptEnabled": 0b,
+    "ScriptEnabled": 1b,
     "ScriptConsole": [
     ],
     "Scripts": [
+        {
+            "Script": "",
+            "Console": [
+            ],
+            "ScriptList": [
+            ]
+        }
     ],
     "ScriptLanguage": "ECMAScript"
 }

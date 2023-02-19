@@ -102,7 +102,6 @@ function create_navigator(from, to) {
 
         dialogClose: function(event) {
             if (event.dialog.getName() == this._dialog) {
-                debug(event, "before move");
                 this.move(event);
             }
         },
