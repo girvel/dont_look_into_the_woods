@@ -26,10 +26,10 @@
     "Size": 8,
     "stopAndInteract": 1b,
     "Resistances": {
-        "Arrow": 1.3030707f,
-        "Explosion": 1.0f,
-        "Knockback": 1.0f,
-        "Melee": 1.0f
+        "Arrow": 1.6036276f,
+        "Explosion": 2.0f,
+        "Knockback": 1.9041845f,
+        "Melee": 1.4063871f
     },
     "BossBar": 0b,
     "RespawnTime": 0,
@@ -148,35 +148,35 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 9143,
+    "HurtByTimestamp": 7298,
     "pSpin": 1b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 50.0d,
+            "Name": "minecraft:generic.max_health"
         },
         {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 50.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
@@ -299,12 +299,12 @@
         "AvailabilityFaction2Id": -1,
         "AvailabilityScoreboardValue": 1,
         "AvailabilityFaction": 0,
-        "AvailabilityDialog": 0,
+        "AvailabilityDialog": 2,
         "AvailabilityScoreboard2Type": 1,
         "AvailabilityFaction2": 0,
         "AvailabilityFactionId": -1,
         "AvailabilityFaction2Stance": 0,
-        "AvailabilityDialogId": -1,
+        "AvailabilityDialogId": 59,
         "AvailabilityQuest4Id": -1,
         "AvailabilityQuest3Id": -1,
         "AvailabilityQuest2Id": -1,
@@ -326,7 +326,7 @@
     "AttackSpeed": 20,
     "PotionDuration": 5,
     "maxDelay": 60,
-    "ScriptEnabled": 0b,
+    "ScriptEnabled": 1b,
     "Role": 0,
     "DropChance": [
         {
@@ -414,6 +414,25 @@
     "pXlr8": 0b,
     "MarkovGeneratorId": 5,
     "Scripts": [
+        {
+            "Script": "var warning_delay = 0;
+
+function tick(event) {
+    warning_delay = Math.max(warning_delay - 1, 0);
+    
+    if (warning_delay <= 0 && event.npc.getPos().distanceTo(findPlayer(event).getPos()) <= 13) {
+        say(event, \"Тролль: Стой! Кто идёт?\");
+        warning_delay = 60 * 2;
+    }
+}",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "tk.js"
+                }
+            ]
+        }
     ],
     "Health": 50.0f,
     "pStick": 0b,
@@ -421,7 +440,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 10,
     "Title": "",
-    "TotalTicksAlive": 791408L,
+    "TotalTicksAlive": 1337863L,
     "Rotation": [
         256.21225f,
         0.0f

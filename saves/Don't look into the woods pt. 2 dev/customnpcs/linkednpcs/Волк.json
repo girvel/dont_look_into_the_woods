@@ -8,59 +8,20 @@
                     "customnpcs:itemscripteddata": {
                     }
                 },
-                "id": "minecraft:bone_meal",
-                "Count": 1b
-            },
-            {
-                "Slot": 1b,
-                "ForgeCaps": {
-                    "customnpcs:itemscripteddata": {
-                    }
-                },
-                "id": "minecraft:iron_nugget",
+                "id": "minecraft:white_dye",
                 "Count": 1b,
                 "tag": {
                     "RepairCost": 0,
                     "display": {
-                        "Name": "{\"text\":\"Малый сод\"}"
-                    }
-                }
-            },
-            {
-                "Slot": 2b,
-                "ForgeCaps": {
-                    "customnpcs:itemscripteddata": {
-                    }
-                },
-                "id": "minecraft:iron_nugget",
-                "Count": 1b,
-                "tag": {
-                    "RepairCost": 0,
-                    "display": {
-                        "Name": "{\"text\":\"Малый сод\"}"
-                    }
-                }
-            },
-            {
-                "Slot": 3b,
-                "ForgeCaps": {
-                    "customnpcs:itemscripteddata": {
-                    }
-                },
-                "id": "minecraft:iron_nugget",
-                "Count": 1b,
-                "tag": {
-                    "RepairCost": 0,
-                    "display": {
-                        "Name": "{\"text\":\"Малый сод\"}"
+                        "Name": "{\"text\":\"Грязная волчья шкура\"}"
                     }
                 }
             }
         ],
         "BossColor": 0,
-        "PotionEffect": 0,
-        "Size": 5,
-        "stopAndInteract": 1b,
+        "PotionEffect": 1,
+        "Size": 7,
+        "stopAndInteract": 0b,
         "Resistances": {
             "Arrow": 1.0f,
             "Explosion": 1.0f,
@@ -69,7 +30,7 @@
         },
         "BossBar": 0b,
         "RespawnTime": 0,
-        "NpcAngrySound": "",
+        "NpcAngrySound": "minecraft:entity.wolf.growl",
         "ReactsToFire": 0b,
         "IgnoreCobweb": 0b,
         "PositionOffsetZ": 5.0f,
@@ -77,14 +38,14 @@
         "PositionOffsetX": 5.0f,
         "LootMode": 0,
         "TransformHasAI": 0b,
-        "AttackStrenght": 6,
+        "AttackStrenght": 8,
         "IsStatue": 0b,
         "MovingPatern": 0,
         "NpcLines": {
             "Lines": [
             ]
         },
-        "DefendFaction": 0b,
+        "DefendFaction": 1b,
         "FireIndirect": 0,
         "NpcVisible": 0,
         "NpcScenes": {
@@ -98,15 +59,15 @@
         "TransformHasJob": 0b,
         "BurnInSun": 0b,
         "StandingState": 0,
-        "AttackInvisible": 0b,
+        "AttackInvisible": 1b,
         "NpcInteractNPCLines": {
             "Lines": [
             ]
         },
-        "WalkingRange": 2,
+        "WalkingRange": 5,
         "ShotCount": 1,
         "pDur": 5,
-        "StartPosNew": [I;-238,87,304],
+        "StartPosNew": [I;-293,71,-40],
         "AttackRange": 2,
         "NpcKillLines": {
             "Lines": [
@@ -114,7 +75,7 @@
         },
         "PotionImmune": 0b,
         "AvoidsSun": 0b,
-        "Texture": "minecraft:textures/entity/skeleton/skeleton.png",
+        "Texture": "minecraft:textures/entity/wolf/wolf.png",
         "NpcJob": 0,
         "BurstCount": 1,
         "NpcAttackLines": {
@@ -130,7 +91,7 @@
         "MarkovGender": 0,
         "pEffect": 0,
         "DistanceToMelee": 0,
-        "NpcStepSound": "minecraft:entity.skeleton.step",
+        "NpcStepSound": "minecraft:entity.wolf.step",
         "FireRate": 5,
         "pEffAmp": 0,
         "ImmuneToFire": 0b,
@@ -146,40 +107,28 @@
             ]
         },
         "pSpin": 0b,
-        "NpcHurtSound": "minecraft:entity.skeleton.hurt",
+        "NpcHurtSound": "minecraft:entity.wolf.hurt",
         "pTrail": 0,
         "CreatureType": 0,
         "TransformHasDisplay": 0b,
-        "NoFallDamage": 0b,
+        "NoFallDamage": 1b,
         "TransformHasRole": 0b,
-        "Name": "Скелет (ближний бой)",
+        "Name": "Волк",
         "SkinColor": 16777215,
         "Weapons": [
-            {
-                "Slot": 2b,
-                "ForgeCaps": {
-                    "customnpcs:itemscripteddata": {
-                    }
-                },
-                "id": "minecraft:stone_sword",
-                "Count": 1b,
-                "tag": {
-                    "Damage": 0
-                }
-            }
         ],
-        "NpcIdleSound": "minecraft:entity.skeleton.ambient",
+        "NpcIdleSound": "",
         "NPCDialogOptions": [
         ],
-        "AggroRange": 8,
-        "DirectLOS": 1b,
-        "HealthRegen": 0,
+        "AggroRange": 48,
+        "DirectLOS": 0b,
+        "HealthRegen": 1,
         "VisibleAvailability": {
-            "AvailabilityQuestId": 2,
+            "AvailabilityQuestId": -1,
             "AvailabilityScoreboardType": 1,
             "AvailabilityFactionStance": 0,
             "AvailabilityScoreboard2Value": 1,
-            "AvailabilityQuest": 1,
+            "AvailabilityQuest": 0,
             "AvailabilityDialog4": 0,
             "AvailabilityScoreboardObjective": "",
             "AvailabilityDialog3": 0,
@@ -209,31 +158,31 @@
         },
         "minDelay": 20,
         "DoorInteract": 2,
-        "MoveSpeed": 5,
+        "MoveSpeed": 7,
         "TransformEditingModus": 0b,
         "UsingSkinUrl": 0b,
         "SkinUrl": "",
-        "CanSwim": 1b,
+        "CanSwim": 0b,
         "GroundSound": "minecraft:block.stone.break",
-        "MaxHealth": 20,
+        "MaxHealth": 10,
         "HideBodyWhenKilled": 1b,
-        "AttackSpeed": 25,
-        "PotionDuration": 5,
+        "AttackSpeed": 15,
+        "PotionDuration": 3,
         "DropChance": [
             {
                 "Integer": 100,
                 "Slot": 0
             },
             {
-                "Integer": 42,
+                "Integer": 100,
                 "Slot": 1
             },
             {
-                "Integer": 9,
+                "Integer": 100,
                 "Slot": 2
             },
             {
-                "Integer": 1,
+                "Integer": 100,
                 "Slot": 3
             },
             {
@@ -273,7 +222,7 @@
         "CanDrown": 1b,
         "pSize": 5,
         "CanSprint": 0b,
-        "CanLeap": 0b,
+        "CanLeap": 1b,
         "TransformIsActive": 0b,
         "ModelData": {
             "LegsConfig": {
@@ -301,11 +250,11 @@
                 "PositionY": 1,
                 "SkinColor": 11830381,
                 "PlayerTexture": 0b,
-                "Color": 10987431,
+                "Color": 10526975,
                 "BrowColor": 5982516,
                 "BrowThickness": 4
             },
-            "EntityName": "minecraft:skeleton",
+            "EntityName": "minecraft:wolf",
             "LegParts": {
                 "Pattern": 0b,
                 "Type": 0b,
@@ -355,17 +304,17 @@
         "GlowTexture": "",
         "MaxFiringRange": 15,
         "pXlr8": 0b,
-        "MarkovGeneratorId": 5,
+        "MarkovGeneratorId": 2,
         "pStick": 0b,
         "MovingPause": 1b,
-        "NpcDeathSound": "minecraft:entity.skeleton.death",
-        "FactionID": 8,
+        "NpcDeathSound": "minecraft:entity.wolf.death",
+        "FactionID": 2,
         "Title": "",
         "ShowName": 1,
         "npcInteracting": 0b,
-        "AvoidsWater": 0b,
+        "AvoidsWater": 1b,
         "NoLivingAnimation": 0b,
         "SpawnCycle": 3
     },
-    "LinkedName": "Скелет (ближний бой)"
+    "LinkedName": "Волк"
 }

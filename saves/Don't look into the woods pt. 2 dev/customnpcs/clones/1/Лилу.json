@@ -133,7 +133,7 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 53403,
+    "HurtByTimestamp": 24642,
     "pSpin": 0b,
     "NpcHurtSound": "",
     "pTrail": 2,
@@ -144,24 +144,24 @@
             "Name": "minecraft:generic.max_health"
         },
         {
+            "Base": 1.0d,
+            "Name": "forge:swim_speed"
+        },
+        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
         },
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 1.0d,
-            "Name": "forge:swim_speed"
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         },
         {
             "Base": 32.0d,
@@ -444,9 +444,9 @@
     "NpcDeathSound": "",
     "FactionID": 9,
     "Title": "",
-    "TotalTicksAlive": 1414566L,
+    "TotalTicksAlive": 1658063L,
     "Rotation": [
-        80.99811f,
+        35.65661f,
         0.0f
     ],
     "ShowName": 1,

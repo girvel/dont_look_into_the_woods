@@ -4,7 +4,7 @@
     "RandomReward": 0b,
     "QuestRepeat": 0,
     "QuestCompletion": 0,
-    "IgnoreNBT": 0b,
+    "IgnoreNBT": 1b,
     "Title": "Разобраться с троллем",
     "Text": "Под мостом домой завёлся тролль.",
     "QuestFactionPoints": {
@@ -27,7 +27,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675675173285L,
+        "TimePast": 1676815480185L,
         "Time": 0L,
         "Subject": ""
     },

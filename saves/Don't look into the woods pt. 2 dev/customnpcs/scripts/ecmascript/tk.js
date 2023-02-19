@@ -1,7 +1,9 @@
-function debug(event, text) {
-    var target = event.npc || event.block || event.player;
+function getTarget(event) {
+    return event.npc || event.block || event.player;
+}
 
-    event.API.executeCommand(target.getWorld(), "/say " + text);
+function debug(event, text) {
+    event.API.executeCommand(getTarget(event).getWorld(), "/say " + text);
 }
 
 function colorMultiplication(r, g, b, k) {
@@ -12,7 +14,7 @@ function colorMultiplication(r, g, b, k) {
 
 function say(event, message) {
     event.API.executeCommand(
-        event.player.getWorld(), 
+        getTarget(event).getWorld(), 
         '/tellraw @p {"text": "' + message + '", "color": "dark_purple"}'
     );
 }

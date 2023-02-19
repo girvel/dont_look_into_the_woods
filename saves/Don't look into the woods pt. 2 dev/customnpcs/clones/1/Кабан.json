@@ -5,6 +5,15 @@
         }
     },
     "NpcInv": [
+        {
+            "Slot": 0b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:porkchop",
+            "Count": 16b
+        }
     ],
     "BossColor": 0,
     "PotionEffect": 0,
@@ -138,12 +147,24 @@
             }
         ]
     },
-    "HurtByTimestamp": 6143,
+    "HurtByTimestamp": 1796,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 40.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 1.0d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
         {
             "Base": 0.5d,
             "Name": "minecraft:generic.movement_speed"
@@ -155,18 +176,6 @@
         {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
-        },
-        {
-            "Base": 40.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 1.0d,
-            "Name": "minecraft:generic.flying_speed"
         }
     ],
     "Invulnerable": 0b,
@@ -301,6 +310,42 @@
     "ScriptEnabled": 0b,
     "Role": 0,
     "DropChance": [
+        {
+            "Integer": 100,
+            "Slot": 0
+        },
+        {
+            "Integer": 100,
+            "Slot": 1
+        },
+        {
+            "Integer": 100,
+            "Slot": 2
+        },
+        {
+            "Integer": 100,
+            "Slot": 3
+        },
+        {
+            "Integer": 100,
+            "Slot": 4
+        },
+        {
+            "Integer": 100,
+            "Slot": 5
+        },
+        {
+            "Integer": 100,
+            "Slot": 6
+        },
+        {
+            "Integer": 100,
+            "Slot": 7
+        },
+        {
+            "Integer": 100,
+            "Slot": 8
+        }
     ],
     "FactionPoints": {
         "DecreaseFaction1Points": 0b,
@@ -357,9 +402,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 2,
     "Title": "",
-    "TotalTicksAlive": 10166L,
+    "TotalTicksAlive": 620631L,
     "Rotation": [
-        306.63544f,
+        317.53543f,
         0.0f
     ],
     "ShowName": 1,

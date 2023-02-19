@@ -5,7 +5,9 @@
     "QuestRepeat": 0,
     "QuestCompletion": 1,
     "Title": "Изгнать Лилу",
-    "Text": "Лилу -- угроза для местных жителей. Надо её изгнать.",
+    "Text": "Лилу -- угроза для местных жителей. Надо её изгнать.
+
+Это задание может оказаться моим последним, поэтому надо закончить все остальные дела, прежде чем браться за это.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -32,7 +34,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1675681359346L,
+        "TimePast": 1676820051296L,
         "Time": 0L,
         "Subject": ""
     },

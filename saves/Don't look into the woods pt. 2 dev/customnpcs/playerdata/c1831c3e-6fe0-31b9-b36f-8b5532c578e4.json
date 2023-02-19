@@ -21,8 +21,16 @@
             "Faction": 8
         },
         {
-            "Points": 0,
+            "Points": 1500,
             "Faction": 9
+        },
+        {
+            "Points": 0,
+            "Faction": 12
+        },
+        {
+            "Points": 2000,
+            "Faction": 13
         }
     ],
     "BankData": [
@@ -31,6 +39,10 @@
     ],
     "QuestData": {
         "CompletedQuests": [
+            {
+                "Quest": 2,
+                "Date": 1676815841387L
+            }
         ],
         "ActiveQuests": [
             {
@@ -62,6 +74,9 @@
             "Dialog": 132
         },
         {
+            "Dialog": 102
+        },
+        {
             "Dialog": 40
         },
         {
@@ -72,6 +87,33 @@
         },
         {
             "Dialog": 80
+        },
+        {
+            "Dialog": 17
+        },
+        {
+            "Dialog": 114
+        },
+        {
+            "Dialog": 52
+        },
+        {
+            "Dialog": 53
+        },
+        {
+            "Dialog": 54
+        },
+        {
+            "Dialog": 118
+        },
+        {
+            "Dialog": 87
+        },
+        {
+            "Dialog": 56
+        },
+        {
+            "Dialog": 88
         },
         {
             "Dialog": 61

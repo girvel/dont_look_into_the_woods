@@ -54,7 +54,7 @@
     "DefendFaction": 1b,
     "FireIndirect": 0,
     "NpcVisible": 0,
-    "LinkedNpcName": "",
+    "LinkedNpcName": "Волк",
     "NpcScenes": {
         "Scenes": [
         ]
@@ -148,19 +148,19 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 58671,
+    "HurtByTimestamp": 102,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.wolf.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
+            "Base": 10.0d,
+            "Name": "minecraft:generic.max_health"
         },
         {
-            "Base": 0.3499999940395355d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 1.0d,
+            "Name": "forge:swim_speed"
         },
         {
             "Base": 0.699999988079071d,
@@ -171,17 +171,21 @@
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
+            "Base": 0.3499999940395355d,
+            "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 10.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
     "TransformHasDisplay": 0b,
-    "NoFallDamage": 0b,
+    "NoFallDamage": 1b,
     "AbsorptionAmount": 0.0f,
     "TransformHasRole": 0b,
     "Name": "Волк",
@@ -192,8 +196,8 @@
     ],
     "NPCDialogOptions": [
     ],
-    "AggroRange": 32,
-    "DirectLOS": 1b,
+    "AggroRange": 48,
+    "DirectLOS": 0b,
     "HealthRegen": 1,
     "ForgeCaps": {
     },
@@ -403,9 +407,9 @@
     "NpcDeathSound": "minecraft:entity.wolf.death",
     "FactionID": 2,
     "Title": "",
-    "TotalTicksAlive": 232888L,
+    "TotalTicksAlive": 650548L,
     "Rotation": [
-        353.0252f,
+        163.48425f,
         0.0f
     ],
     "ShowName": 1,
