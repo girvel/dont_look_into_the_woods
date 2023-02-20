@@ -115,6 +115,18 @@
                 "Count": 32b
             },
             {
+                "Slot": 4b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "Potion": "minecraft:long_invisibility"
+                }
+            },
+            {
                 "Slot": 5b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -136,6 +148,18 @@
                     }
                 },
                 "id": "minecraft:shield",
+                "Count": 1b,
+                "tag": {
+                    "Damage": 0
+                }
+            },
+            {
+                "Slot": 7b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_helmet",
                 "Count": 1b,
                 "tag": {
                     "Damage": 0
@@ -166,6 +190,33 @@
                 "Count": 1b
             },
             {
+                "Slot": 10b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_chestplate",
+                "Count": 1b,
+                "tag": {
+                    "Damage": 0
+                }
+            },
+            {
+                "Slot": 11b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:gold_nugget",
+                "Count": 5b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Большой сод\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 12b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -175,6 +226,18 @@
                 "Count": 1b
             },
             {
+                "Slot": 13b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_leggings",
+                "Count": 1b,
+                "tag": {
+                    "Damage": 0
+                }
+            },
+            {
                 "Slot": 15b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -182,6 +245,18 @@
                 },
                 "id": "minecraft:lead",
                 "Count": 1b
+            },
+            {
+                "Slot": 16b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:leather_boots",
+                "Count": 1b,
+                "tag": {
+                    "Damage": 0
+                }
             }
         ]
     },
@@ -314,6 +389,21 @@
                 }
             },
             {
+                "Slot": 4b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:gold_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Большой сод\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 5b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -324,6 +414,21 @@
             },
             {
                 "Slot": 6b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 16b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 7b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
                     }
@@ -362,6 +467,30 @@
                 }
             },
             {
+                "Slot": 10b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 32b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 11b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:nautilus_shell",
+                "Count": 3b
+            },
+            {
                 "Slot": 12b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -377,6 +506,21 @@
                 }
             },
             {
+                "Slot": 13b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 24b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 15b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -384,6 +528,21 @@
                 },
                 "id": "minecraft:iron_nugget",
                 "Count": 8b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 16b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 10b,
                 "tag": {
                     "RepairCost": 0,
                     "display": {
@@ -1922,7 +2081,7 @@ Caused by: <eval>:110 TypeError: Cannot read property \"hasReadDialog\" from und
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 1048084L,
+    "TotalTicksAlive": 1126010L,
     "Rotation": [
         184.99088f,
         0.0f

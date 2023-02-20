@@ -133,35 +133,35 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 1519,
+    "HurtByTimestamp": 14670,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 7.0d,
-            "Name": "minecraft:generic.attack_damage"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 35.0d,
+            "Name": "minecraft:generic.max_health"
         },
         {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 35.0d,
-            "Name": "minecraft:generic.max_health"
+            "Base": 7.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
@@ -431,6 +431,15 @@ function init(event) {
     inventory.setRightHand(event.npc.getWorld().createItem(\"minecraft:air\", 1));
     
     navigator.init(event);
+    
+    var line_index = findPlayer(event).getFactionPoints(12) / 2 - 1
+    if (line_index >= 0) {
+        say(event, \"Маэль: \" + [
+            \"<маниакально смеётся> Работает! Я бессмертен!\",
+            \"Меня невозможно победить.\",
+            \"Я успокоился. Давай поговорим.\",
+        ][line_index]);
+    }
 }
 
 function dialogClose(event) {
@@ -463,9 +472,9 @@ function targetLost(event) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 12,
     "Title": "",
-    "TotalTicksAlive": 454015L,
+    "TotalTicksAlive": 656129L,
     "Rotation": [
-        99.29944f,
+        311.17154f,
         0.0f
     ],
     "ShowName": 1,

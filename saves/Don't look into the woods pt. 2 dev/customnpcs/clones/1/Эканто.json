@@ -6,22 +6,6 @@
     },
     "NpcInv": [
         {
-            "Slot": 0b,
-            "ForgeCaps": {
-                "customnpcs:itemscripteddata": {
-                }
-            },
-            "id": "minecraft:crossbow",
-            "Count": 1b,
-            "tag": {
-                "RepairCost": 0,
-                "Damage": 321,
-                "display": {
-                    "Name": "{\"text\":\"Фамильный арбалет\"}"
-                }
-            }
-        },
-        {
             "Slot": 1b,
             "ForgeCaps": {
                 "customnpcs:itemscripteddata": {
@@ -133,7 +117,7 @@
     },
     "PotionImmune": 0b,
     "AvoidsSun": 0b,
-    "Texture": "customnpcs:textures/entity/humanmale/guardsteve.png",
+    "Texture": "customnpcs:textures/entity/monstermale/zombiebloody.png",
     "NpcJob": 0,
     "BurstCount": 1,
     "NpcAttackLines": {
@@ -185,12 +169,20 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 2847,
+    "HurtByTimestamp": 8071,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
+        },
         {
             "Base": 0.0d,
             "Name": "minecraft:generic.attack_damage"
@@ -204,16 +196,8 @@
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -226,33 +210,18 @@
     "SkinColor": 16777215,
     "NpcIdleSound": "",
     "Weapons": [
-        {
-            "Slot": 0b,
-            "ForgeCaps": {
-                "customnpcs:itemscripteddata": {
-                }
-            },
-            "id": "minecraft:crossbow",
-            "Count": 1b,
-            "tag": {
-                "RepairCost": 0,
-                "Damage": 321,
-                "display": {
-                    "Name": "{\"text\":\"Фамильный арбалет\"}"
-                }
-            }
-        },
-        {
-            "Slot": 1b,
-            "ForgeCaps": {
-                "customnpcs:itemscripteddata": {
-                }
-            },
-            "id": "minecraft:arrow",
-            "Count": 1b
-        }
     ],
     "NPCDialogOptions": [
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 139,
+                "Title": "А. Жопа чешется",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 0
+        }
     ],
     "AggroRange": 16,
     "DirectLOS": 1b,
@@ -324,11 +293,11 @@
         }
     },
     "VisibleAvailability": {
-        "AvailabilityQuestId": -1,
+        "AvailabilityQuestId": 2,
         "AvailabilityScoreboardType": 1,
         "AvailabilityFactionStance": 0,
         "AvailabilityScoreboard2Value": 1,
-        "AvailabilityQuest": 0,
+        "AvailabilityQuest": 1,
         "AvailabilityDialog4": 0,
         "AvailabilityScoreboardObjective": "",
         "AvailabilityDialog3": 0,
@@ -462,9 +431,9 @@
     "pStick": 0b,
     "MovingPause": 1b,
     "NpcDeathSound": "minecraft:entity.player.hurt",
-    "FactionID": 1,
+    "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 36328L,
+    "TotalTicksAlive": 48901L,
     "Rotation": [
         -317.67822f,
         0.0f

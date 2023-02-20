@@ -64,6 +64,97 @@
         0.085f
     ],
     "BurnInSun": 0b,
+    "TraderSold": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:gold_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Большой сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 1b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:cooked_porkchop",
+                "Count": 8b
+            },
+            {
+                "Slot": 3b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 60b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 4b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Potion": "minecraft:strength",
+                    "display": {
+                        "Name": "{\"text\":\"Erodagae menid\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 7b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Potion": "minecraft:swiftness",
+                    "display": {
+                        "Name": "{\"text\":\"Ром\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 10b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Potion": "minecraft:long_turtle_master",
+                    "display": {
+                        "Name": "{\"text\":\"Эль\"}"
+                    }
+                }
+            }
+        ]
+    },
     "StandingState": 0,
     "AttackInvisible": 0b,
     "NpcInteractNPCLines": {
@@ -74,6 +165,7 @@
     "WalkingRange": 10,
     "ShotCount": 1,
     "pDur": 5,
+    "TraderIgnoreDamage": 0b,
     "AttackRange": 2,
     "NpcKillLines": {
         "Lines": [
@@ -115,6 +207,7 @@
         "Lines": [
         ]
     },
+    "TraderMarket": "",
     "Fire": -1s,
     "ArmorItems": [
         {
@@ -133,7 +226,101 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 17865,
+    "HurtByTimestamp": 77435,
+    "TraderCurrency": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 64b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 1b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 5b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 3b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:gold_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Большой сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 4b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 32b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 7b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 14b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 10b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 10b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            }
+        ]
+    },
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
@@ -144,20 +331,20 @@
             "Name": "minecraft:generic.max_health"
         },
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         },
         {
             "Base": 32.0d,
@@ -219,12 +406,42 @@
         {
             "NPCDialog": {
                 "DialogCommand": "",
+                "Dialog": 125,
+                "Title": "-Д. Жена Руна мертва",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 4
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 140,
+                "Title": "-Е. Странный чел",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 5
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 141,
+                "Title": "-Ё. Не смотри в лес",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 6
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
                 "Dialog": 8,
                 "Title": "А. Приветствие",
                 "DialogColor": 14737632,
                 "OptionType": 1
             },
-            "DialogSlot": 6
+            "DialogSlot": 11
         }
     ],
     "AggroRange": 16,
@@ -336,6 +553,7 @@
     "UsingSkinUrl": 0b,
     "SkinUrl": "",
     "CanSwim": 1b,
+    "TraderIgnoreNBT": 0b,
     "GroundSound": "minecraft:block.stone.break",
     "MaxHealth": 20,
     "HideBodyWhenKilled": 0b,
@@ -343,7 +561,7 @@
     "PotionDuration": 5,
     "maxDelay": 40,
     "ScriptEnabled": 1b,
-    "Role": 0,
+    "Role": 1,
     "DropChance": [
         {
             "Integer": 100,
@@ -444,7 +662,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 2272054L,
+    "TotalTicksAlive": 2760494L,
     "Rotation": [
         352.71533f,
         0.0f

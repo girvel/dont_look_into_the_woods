@@ -25,7 +25,7 @@
             "Faction": 9
         },
         {
-            "Points": 0,
+            "Points": 6,
             "Faction": 12
         },
         {
@@ -56,9 +56,6 @@
     "PlayerCompanionId": 0,
     "DialogData": [
         {
-            "Dialog": 32
-        },
-        {
             "Dialog": 128
         },
         {
@@ -71,13 +68,10 @@
             "Dialog": 131
         },
         {
-            "Dialog": 132
+            "Dialog": 138
         },
         {
-            "Dialog": 102
-        },
-        {
-            "Dialog": 40
+            "Dialog": 139
         },
         {
             "Dialog": 14
@@ -90,6 +84,24 @@
         },
         {
             "Dialog": 17
+        },
+        {
+            "Dialog": 87
+        },
+        {
+            "Dialog": 88
+        },
+        {
+            "Dialog": 89
+        },
+        {
+            "Dialog": 32
+        },
+        {
+            "Dialog": 102
+        },
+        {
+            "Dialog": 40
         },
         {
             "Dialog": 114
@@ -107,13 +119,7 @@
             "Dialog": 118
         },
         {
-            "Dialog": 87
-        },
-        {
             "Dialog": 56
-        },
-        {
-            "Dialog": 88
         },
         {
             "Dialog": 61

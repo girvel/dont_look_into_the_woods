@@ -405,6 +405,22 @@ function interact(event) {
                 }
             },
             {
+                "Slot": 12b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Potion": "minecraft:swiftness",
+                    "display": {
+                        "Name": "{\"text\":\"Ром\"}"
+                    }
+                }
+            },
+            {
                 "Slot": 13b,
                 "ForgeCaps": {
                     "customnpcs:itemscripteddata": {
@@ -432,6 +448,22 @@ function interact(event) {
                     "RepairCost": 0,
                     "display": {
                         "Name": "{\"text\":\"Чистая шкура\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 15b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:potion",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Potion": "minecraft:long_turtle_master",
+                    "display": {
+                        "Name": "{\"text\":\"Эль\"}"
                     }
                 }
             },
@@ -692,28 +724,28 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.25d,
-            "Name": "minecraft:generic.movement_speed"
+            "Base": 1.0d,
+            "Name": "minecraft:generic.max_health"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 1.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
+            "Base": 0.25d,
+            "Name": "minecraft:generic.movement_speed"
         },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
         },
         {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
         }
     ],
     "Invulnerable": 0b,
@@ -940,10 +972,10 @@ Caused by: <eval>:5 TypeError: event.item.setName is not a function
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 3,
     "Title": "Patreon",
-    "TotalTicksAlive": 74577L,
+    "TotalTicksAlive": 75445L,
     "Rotation": [
         196.11105f,
-        30.22379f
+        0.0f
     ],
     "ShowName": 0,
     "npcInteracting": 1b,
