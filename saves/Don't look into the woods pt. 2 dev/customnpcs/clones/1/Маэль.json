@@ -133,35 +133,35 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 14670,
+    "HurtByTimestamp": 21455,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 35.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
-            "Base": 7.0d,
-            "Name": "minecraft:generic.attack_damage"
+            "Base": 35.0d,
+            "Name": "minecraft:generic.max_health"
         },
         {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
+            "Base": 7.0d,
+            "Name": "minecraft:generic.attack_damage"
         },
         {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         }
     ],
     "Invulnerable": 0b,
@@ -472,7 +472,7 @@ function targetLost(event) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 12,
     "Title": "",
-    "TotalTicksAlive": 656129L,
+    "TotalTicksAlive": 712188L,
     "Rotation": [
         311.17154f,
         0.0f

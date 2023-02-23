@@ -55,10 +55,9 @@ function findDialogByName(event, name) {
 }
 
 function findPlayer(event) {
-
     var worlds = event.API.getIWorlds();
-    for (var i = 0; i < worlds.length; i++) {
 
+    for (var i = 0; i < worlds.length; i++) {
         var players = worlds[i].getAllPlayers();
         if (players.length > 0) return players[0];
     }

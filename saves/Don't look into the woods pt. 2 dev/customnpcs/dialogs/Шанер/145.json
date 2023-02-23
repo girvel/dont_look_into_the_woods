@@ -1,24 +1,14 @@
 {
     "DialogShowWheel": 0b,
-    "AvailabilityQuestId": -1,
+    "AvailabilityQuestId": 6,
     "Options": [
-        {
-            "OptionSlot": 0,
-            "Option": {
-                "DialogCommand": "",
-                "Dialog": 144,
-                "Title": "Воскреси жену Руна.",
-                "DialogColor": 14737632,
-                "OptionType": 1
-            }
-        }
     ],
     "AvailabilityScoreboardType": 1,
     "DialogHideNPC": 0b,
     "AvailabilityFactionStance": 0,
     "AvailabilityScoreboard2Value": 1,
-    "DialogId": 100,
-    "AvailabilityQuest": 0,
+    "DialogId": 145,
+    "AvailabilityQuest": 1,
     "AvailabilityDialog4": 0,
     "AvailabilityScoreboardObjective": "",
     "AvailabilityDialog3": 0,
@@ -38,16 +28,16 @@
     "AvailabilityScoreboardValue": 1,
     "DialogDisableEsc": 0b,
     "AvailabilityFaction": 0,
-    "DialogTitle": "В. Чем могу помочь?",
-    "AvailabilityDialog": 0,
+    "DialogTitle": "-Д. Вступлю в Инквизицию",
+    "AvailabilityDialog": 2,
     "AvailabilityScoreboard2Type": 1,
     "AvailabilityFaction2": 0,
     "AvailabilityFactionId": -1,
     "AvailabilityFaction2Stance": 0,
     "DialogCommand": "",
-    "AvailabilityDialogId": -1,
+    "AvailabilityDialogId": 145,
     "OptionFaction2Points": 100,
-    "DialogText": "Здравствуй. Чем могу помочь?",
+    "DialogText": "Я слышал, как круто ты расправился с этими волками! Я теперь тоже хочу быть инквизитором, буду бороться со злом и защищать хороших людей. Как ты думаешь, я справлюсь?",
     "AvailabilityQuest4Id": -1,
     "AvailabilityQuest3Id": -1,
     "AvailabilityQuest2Id": -1,
@@ -64,7 +54,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1676904536714L,
+        "TimePast": 1676907587450L,
         "Time": 0L,
         "Subject": ""
     }

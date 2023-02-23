@@ -133,12 +133,24 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 23747,
+    "HurtByTimestamp": 31090,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
+        {
+            "Base": 5.0d,
+            "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.4000000059604645d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
+        },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
@@ -148,20 +160,8 @@
             "Name": "minecraft:generic.follow_range"
         },
         {
-            "Base": 0.4000000059604645d,
-            "Name": "minecraft:generic.flying_speed"
-        },
-        {
             "Base": 0.20000000298023224d,
             "Name": "minecraft:generic.movement_speed"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 5.0d,
-            "Name": "minecraft:generic.attack_damage"
         }
     ],
     "Invulnerable": 0b,
@@ -352,7 +352,7 @@
     "AttackSpeed": 20,
     "PotionDuration": 5,
     "maxDelay": 40,
-    "ScriptEnabled": 0b,
+    "ScriptEnabled": 1b,
     "Role": 0,
     "DropChance": [
         {
@@ -440,6 +440,25 @@
     "pXlr8": 0b,
     "MarkovGeneratorId": 7,
     "Scripts": [
+        {
+            "Script": "var navigator = create_navigator([-147, 68, -115], [-452, 63, -193])
+    .predicate(function(event) { return findPlayer(event).hasFinishedQuest(6); });  // quest about wolves
+
+function init(event) {
+    navigator.init(event);
+}
+
+function tick(event) {
+    navigator.tick(event);
+}",
+            "Console": [
+            ],
+            "ScriptList": [
+                {
+                    "Line": "tk.js"
+                }
+            ]
+        }
     ],
     "Health": 20.0f,
     "pStick": 0b,
@@ -447,9 +466,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 3283165L,
+    "TotalTicksAlive": 4059344L,
     "Rotation": [
-        115.50267f,
+        73.028656f,
         0.0f
     ],
     "ShowName": 1,
