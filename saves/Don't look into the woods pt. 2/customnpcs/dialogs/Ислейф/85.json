@@ -7,7 +7,7 @@
             "Option": {
                 "DialogCommand": "",
                 "Dialog": 86,
-                "Title": "Я мог вызволить древнего духа, который пробудил древнее зло.",
+                "Title": "Пепел с неба и восстающие злобные твари - возможно, моя вина",
                 "DialogColor": 14737632,
                 "OptionType": 1
             }
@@ -64,7 +64,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1676318712497L,
+        "TimePast": 1677339226740L,
         "Time": 0L,
         "Subject": ""
     }

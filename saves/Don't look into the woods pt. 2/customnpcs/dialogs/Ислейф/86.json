@@ -37,7 +37,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
-    "DialogText": "Духа?
+    "DialogText": "Я извиняюсь, что?
 
 ...
 
@@ -60,7 +60,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1676318981666L,
+        "TimePast": 1677339260060L,
         "Time": 0L,
         "Subject": ""
     }

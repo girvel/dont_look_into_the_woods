@@ -47,7 +47,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
-    "DialogText": "Стейнхильдр. Я читал про него в учебнике истории.
+    "DialogText": "Стейнхильдр. Я читал про него в одной книге.
 
 <отпивает>
 
@@ -68,7 +68,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1676814653488L,
+        "TimePast": 1677338894435L,
         "Time": 0L,
         "Subject": ""
     }

@@ -11,14 +11,8 @@
                 "customnpcs:itemscripteddata": {
                 }
             },
-            "id": "minecraft:iron_nugget",
-            "Count": 1b,
-            "tag": {
-                "RepairCost": 0,
-                "display": {
-                    "Name": "{\"text\":\"Малый сод\"}"
-                }
-            }
+            "id": "minecraft:sweet_berries",
+            "Count": 1b
         }
     ],
     "BossColor": 0,
@@ -153,15 +147,23 @@
             }
         ]
     },
-    "HurtByTimestamp": 5336,
+    "HurtByTimestamp": 15822,
     "pSpin": 0b,
     "NpcHurtSound": "",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
+        },
+        {
             "Base": 1.0d,
             "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 0.25d,
@@ -174,14 +176,6 @@
         {
             "Base": 3.0d,
             "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
         }
     ],
     "Invulnerable": 0b,
@@ -317,7 +311,7 @@
     "Role": 0,
     "DropChance": [
         {
-            "Integer": 15,
+            "Integer": 100,
             "Slot": 0
         },
         {
@@ -406,11 +400,11 @@
     "pStick": 0b,
     "MovingPause": 1b,
     "NpcDeathSound": "",
-    "FactionID": 8,
+    "FactionID": 2,
     "Title": "",
-    "TotalTicksAlive": 5482L,
+    "TotalTicksAlive": 36223L,
     "Rotation": [
-        -187.36877f,
+        7.903839f,
         0.0f
     ],
     "ShowName": 1,

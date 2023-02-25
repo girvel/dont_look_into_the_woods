@@ -341,20 +341,20 @@
             "Name": "minecraft:generic.attack_damage"
         },
         {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
-            "Base": 1.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
             "Base": 0.5d,
             "Name": "minecraft:generic.flying_speed"
         },
         {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 1.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -545,7 +545,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 3,
     "Title": "",
-    "TotalTicksAlive": 3935L,
+    "TotalTicksAlive": 4022L,
     "Rotation": [
         -249.50867f,
         0.0f

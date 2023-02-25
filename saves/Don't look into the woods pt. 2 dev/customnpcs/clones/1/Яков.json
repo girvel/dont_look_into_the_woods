@@ -216,20 +216,12 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 15249,
+    "HurtByTimestamp": 7114,
     "pSpin": 0b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
-        {
-            "Base": 0.0d,
-            "Name": "minecraft:generic.armor"
-        },
-        {
-            "Base": 0.20000000298023224d,
-            "Name": "minecraft:generic.movement_speed"
-        },
         {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
@@ -239,20 +231,28 @@
             "Name": "minecraft:generic.armor_toughness"
         },
         {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
-        },
-        {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
             "Base": 0.4000000059604645d,
             "Name": "minecraft:generic.flying_speed"
+        },
+        {
+            "Base": 0.20000000298023224d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 0.0d,
+            "Name": "minecraft:generic.armor"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -276,6 +276,46 @@
                 "OptionType": 1
             },
             "DialogSlot": 0
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 135,
+                "Title": "-Б. Гоблины",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 1
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 136,
+                "Title": "-В. Спасение мальчиков",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 2
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 137,
+                "Title": "-Г. Маэль",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 3
+        },
+        {
+            "NPCDialog": {
+                "DialogCommand": "",
+                "Dialog": 146,
+                "Title": "-Д. Попытка устроиться в Инквизицию",
+                "DialogColor": 14737632,
+                "OptionType": 1
+            },
+            "DialogSlot": 4
         },
         {
             "NPCDialog": {
@@ -592,7 +632,7 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 3906646L,
+    "TotalTicksAlive": 4594222L,
     "Rotation": [
         89.01204f,
         0.0f

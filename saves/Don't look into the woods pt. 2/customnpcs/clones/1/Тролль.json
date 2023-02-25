@@ -19,6 +19,45 @@
                     "Name": "{\"text\":\"Кость тролля\"}"
                 }
             }
+        },
+        {
+            "Slot": 1b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:iron_nugget",
+            "Count": 15b,
+            "tag": {
+                "RepairCost": 0,
+                "display": {
+                    "Name": "{\"text\":\"Малый сод\"}"
+                }
+            }
+        },
+        {
+            "Slot": 2b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:gold_nugget",
+            "Count": 1b,
+            "tag": {
+                "RepairCost": 0,
+                "display": {
+                    "Name": "{\"text\":\"Большой сод\"}"
+                }
+            }
+        },
+        {
+            "Slot": 3b,
+            "ForgeCaps": {
+                "customnpcs:itemscripteddata": {
+                }
+            },
+            "id": "minecraft:arrow",
+            "Count": 5b
         }
     ],
     "BossColor": 0,
@@ -148,35 +187,35 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 7298,
+    "HurtByTimestamp": 47940,
     "pSpin": 1b,
     "NpcHurtSound": "minecraft:entity.player.hurt",
     "pTrail": 0,
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 50.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 0.5d,
-            "Name": "minecraft:generic.flying_speed"
+            "Base": 0.08d,
+            "Name": "forge:entity_gravity"
         },
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
         },
         {
+            "Base": 0.5d,
+            "Name": "minecraft:generic.flying_speed"
+        },
+        {
             "Base": 0.25d,
             "Name": "minecraft:generic.movement_speed"
         },
         {
-            "Base": 0.08d,
-            "Name": "forge:entity_gravity"
-        },
-        {
             "Base": 32.0d,
             "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 50.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -418,9 +457,12 @@
             "Script": "var warning_delay = 0;
 
 function tick(event) {
+    var player = event.npc.getWorld().getAllPlayers()[0];
+    if (!player || !player.hasFinishedQuest(2) || player.hasReadDialog(findDialogByName(event, \"АААБАА. Ладно ухожу\"))) return;
+
     warning_delay = Math.max(warning_delay - 1, 0);
     
-    if (warning_delay <= 0 && event.npc.getPos().distanceTo(findPlayer(event).getPos()) <= 13) {
+    if (warning_delay <= 0 && event.npc.getPos().distanceTo(player.getPos()) <= 13) {
         say(event, \"Тролль: Стой! Кто идёт?\");
         warning_delay = 60 * 2;
     }
@@ -440,10 +482,10 @@ function tick(event) {
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 10,
     "Title": "",
-    "TotalTicksAlive": 1337863L,
+    "TotalTicksAlive": 1713835L,
     "Rotation": [
         256.21225f,
-        0.0f
+        -33.07155f
     ],
     "ShowName": 1,
     "npcInteracting": 1b,

@@ -17,6 +17,30 @@
     },
     "PlayerCompanionId": 0,
     "DialogData": [
+        {
+            "Dialog": 80
+        },
+        {
+            "Dialog": 81
+        },
+        {
+            "Dialog": 82
+        },
+        {
+            "Dialog": 83
+        },
+        {
+            "Dialog": 84
+        },
+        {
+            "Dialog": 78
+        },
+        {
+            "Dialog": 63
+        },
+        {
+            "Dialog": 79
+        }
     ],
     "ItemGiverChained": [
     ],
