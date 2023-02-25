@@ -6,7 +6,7 @@
     "QuestCompletion": 0,
     "IgnoreNBT": 0b,
     "Title": "Что-нибудь попить",
-    "Text": "",
+    "Text": "Сбегать за водичкой.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -27,7 +27,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674313510516L,
+        "TimePast": 1677322217956L,
         "Time": 0L,
         "Subject": ""
     },

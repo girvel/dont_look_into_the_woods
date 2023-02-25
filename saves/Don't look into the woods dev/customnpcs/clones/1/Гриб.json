@@ -407,7 +407,7 @@
         "Lines": [
         ]
     },
-    "HurtByTimestamp": 6332,
+    "HurtByTimestamp": 11364,
     "TraderCurrency": {
         "NpcMiscInv": [
             {
@@ -441,7 +441,7 @@
                     }
                 },
                 "id": "minecraft:iron_nugget",
-                "Count": 3b,
+                "Count": 1b,
                 "tag": {
                     "RepairCost": 0,
                     "display": {
@@ -703,20 +703,8 @@
     "CreatureType": 0,
     "Attributes": [
         {
-            "Base": 0.10000000149011612d,
-            "Name": "minecraft:generic.movement_speed"
-        },
-        {
             "Base": 0.08d,
             "Name": "forge:entity_gravity"
-        },
-        {
-            "Base": 20.0d,
-            "Name": "minecraft:generic.max_health"
-        },
-        {
-            "Base": 32.0d,
-            "Name": "minecraft:generic.follow_range"
         },
         {
             "Base": 0.20000000298023224d,
@@ -725,6 +713,18 @@
         {
             "Base": 5.0d,
             "Name": "minecraft:generic.attack_damage"
+        },
+        {
+            "Base": 32.0d,
+            "Name": "minecraft:generic.follow_range"
+        },
+        {
+            "Base": 0.10000000149011612d,
+            "Name": "minecraft:generic.movement_speed"
+        },
+        {
+            "Base": 20.0d,
+            "Name": "minecraft:generic.max_health"
         }
     ],
     "Invulnerable": 0b,
@@ -961,9 +961,9 @@
     "NpcDeathSound": "minecraft:entity.player.hurt",
     "FactionID": 0,
     "Title": "",
-    "TotalTicksAlive": 549815L,
+    "TotalTicksAlive": 760413L,
     "Rotation": [
-        271.03577f,
+        271.09857f,
         0.0f
     ],
     "ShowName": 1,

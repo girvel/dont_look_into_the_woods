@@ -1,0 +1,76 @@
+{
+    "CompleterNpc": "Ислейф",
+    "NextQuestId": -1,
+    "RandomReward": 0b,
+    "QuestRepeat": 0,
+    "QuestCompletion": 0,
+    "Title": "Найти Анселя",
+    "Text": "Один из инквизиторов пропал в руинах какой-то башни, надо его найти. Керитор знает где это.",
+    "QuestFactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "RewardExp": 0,
+    "QuestCommand": "",
+    "QuestDialogs": [
+        {
+            "Integer": 80,
+            "Slot": 0
+        }
+    ],
+    "ModRev": 18,
+    "Type": 1,
+    "QuestMail": {
+        "Sender": "",
+        "BeenRead": 0b,
+        "Message": {
+        },
+        "MailItems": [
+        ],
+        "MailQuest": -1,
+        "TimePast": 1676319170315L,
+        "Time": 0L,
+        "Subject": ""
+    },
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:gold_nugget",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Большой сод\"}"
+                    }
+                }
+            },
+            {
+                "Slot": 1b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:iron_nugget",
+                "Count": 16b,
+                "tag": {
+                    "RepairCost": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Малый сод\"}"
+                    }
+                }
+            }
+        ]
+    },
+    "CompleteText": "Ислейф: Мёртв, говоришь? Плохо. Но зато наглядная демонстрация чего стоит эта работа. Всё ещё хочешь остаться?
+
+Хорошо. Ты теперь один из нас. "
+}

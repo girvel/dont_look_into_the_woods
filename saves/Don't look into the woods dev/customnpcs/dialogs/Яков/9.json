@@ -47,7 +47,7 @@
     "DialogCommand": "",
     "AvailabilityDialogId": -1,
     "OptionFaction2Points": 100,
-    "DialogText": "Я ничего не прятал у себя в комнате, и если бы и прятал, то уже бы перепрятал.
+    "DialogText": "Я ничего не прятал у себя в комнате, и если бы и прятал, то уже бы в другом месте.
 
 ...
 
@@ -68,7 +68,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674408864998L,
+        "TimePast": 1677321892551L,
         "Time": 0L,
         "Subject": ""
     }

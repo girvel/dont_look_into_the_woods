@@ -5,7 +5,7 @@
     "QuestRepeat": 0,
     "QuestCompletion": 1,
     "Title": "Помочь мальчику",
-    "Text": "",
+    "Text": "Хочу разобраться, что за мальчик в доме посреди леса и как он тут оказался.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -32,7 +32,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674302788337L,
+        "TimePast": 1677322118802L,
         "Time": 0L,
         "Subject": ""
     },

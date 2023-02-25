@@ -1,0 +1,116 @@
+{
+    "CompleterNpc": "Рун",
+    "NextQuestId": -1,
+    "RandomReward": 0b,
+    "QuestRepeat": 0,
+    "QuestCompletion": 0,
+    "IgnoreNBT": 0b,
+    "Title": "Метеоритное железо",
+    "Text": "Найти метеоритное железо для доспехов.",
+    "QuestFactionPoints": {
+        "DecreaseFaction1Points": 0b,
+        "OptionFaction2Points": 100,
+        "OptionFactions1": -1,
+        "OptionFactions2": -1,
+        "OptionFaction1Points": 100,
+        "DecreaseFaction2Points": 0b
+    },
+    "RewardExp": 0,
+    "QuestCommand": "",
+    "ModRev": 18,
+    "Type": 0,
+    "QuestMail": {
+        "Sender": "",
+        "BeenRead": 0b,
+        "Message": {
+        },
+        "MailItems": [
+        ],
+        "MailQuest": -1,
+        "TimePast": 1676640558323L,
+        "Time": 0L,
+        "Subject": ""
+    },
+    "IgnoreDamage": 0b,
+    "Rewards": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                    }
+                },
+                "id": "minecraft:diamond_helmet",
+                "Count": 1b,
+                "tag": {
+                    "RepairCost": 0,
+                    "Damage": 0,
+                    "display": {
+                        "Name": "{\"text\":\"Небесная корона\"}"
+                    }
+                }
+            }
+        ]
+    },
+    "Items": {
+        "NpcMiscInv": [
+            {
+                "Slot": 0b,
+                "ForgeCaps": {
+                    "customnpcs:itemscripteddata": {
+                        "ScriptEnabled": 1b,
+                        "DurabilityValue": 1.0d,
+                        "Scripts": [
+                            {
+                                "Script": "function init(event) {
+    event.item.setTexture(\"minecraft:iron_ingot\")
+    event.item.setDurabilityShow(false)
+    event.item.setColor(0x9ffeff)
+    event.item.setCustomName(\"Метеоритное железо\")
+}",
+                                "Console": [
+                                ],
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:iron_ingot",
+                        "ItemColor": 10485503,
+                        "MaxStackSize": 64,
+                        "DurabilityShow": 0b,
+                        "ScriptLanguage": "ECMAScript",
+                        "DurabilityColor": -1
+                    }
+                },
+                "id": "customnpcs:scripted_item",
+                "Count": 1b,
+                "tag": {
+                    "ScriptedData": {
+                        "ScriptEnabled": 1b,
+                        "Scripts": [
+                            {
+                                "Console": [
+                                ],
+                                "Script": "function init(event) {
+    event.item.setTexture(\"minecraft:iron_ingot\")
+    event.item.setDurabilityShow(false)
+    event.item.setColor(0x9ffeff)
+    event.item.setCustomName(\"Метеоритное железо\")
+}",
+                                "ScriptList": [
+                                ]
+                            }
+                        ],
+                        "ScriptTexture": "minecraft:iron_ingot",
+                        "ScriptLanguage": "ECMAScript"
+                    },
+                    "display": {
+                        "Name": "{\"translate\":\"Метеоритное железо\"}"
+                    }
+                }
+            }
+        ]
+    },
+    "LeaveItems": 0b,
+    "CompleteText": ""
+}

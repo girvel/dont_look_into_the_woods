@@ -6,7 +6,7 @@
     "QuestCompletion": 0,
     "IgnoreNBT": 0b,
     "Title": "Ингридиенты для снадобья",
-    "Text": "",
+    "Text": "Нужно собрать ингридиенты для снадобья, лечащего отравление.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -27,7 +27,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674229041984L,
+        "TimePast": 1677322122129L,
         "Time": 0L,
         "Subject": ""
     },
@@ -91,5 +91,9 @@
         ]
     },
     "LeaveItems": 0b,
-    "CompleteText": ""
+    "CompleteText": "Яков: Да, это все нужные ингридиенты.
+
+...
+
+Вот, держи снадобье."
 }

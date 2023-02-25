@@ -6,7 +6,7 @@
     "QuestCompletion": 0,
     "IgnoreNBT": 0b,
     "Title": "Что-нибудь тёплое",
-    "Text": "",
+    "Text": "Раздобыть что-нибудь тёплое, наподобие пальто или шкуры.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -27,7 +27,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674408443375L,
+        "TimePast": 1677322242385L,
         "Time": 0L,
         "Subject": ""
     },

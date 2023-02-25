@@ -6,7 +6,7 @@
     "QuestCompletion": 0,
     "IgnoreNBT": 0b,
     "Title": "Что-нибудь от тошноты",
-    "Text": "",
+    "Text": "Разыскать что-нибудь, лечащее тошноту.",
     "QuestFactionPoints": {
         "DecreaseFaction1Points": 0b,
         "OptionFaction2Points": 100,
@@ -27,7 +27,7 @@
         "MailItems": [
         ],
         "MailQuest": -1,
-        "TimePast": 1674407982200L,
+        "TimePast": 1677322191199L,
         "Time": 0L,
         "Subject": ""
     },
