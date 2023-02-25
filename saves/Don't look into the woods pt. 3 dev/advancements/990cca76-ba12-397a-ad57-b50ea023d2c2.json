@@ -1,9 +1,0 @@
-{
-  "minecraft:recipes/building_blocks/mossy_stone_bricks": {
-    "criteria": {
-      "has_mossy_cobblestone": "2023-01-30 20:35:55 +0400"
-    },
-    "done": true
-  },
-  "DataVersion": 2586
-}
